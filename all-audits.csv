@@ -1,0 +1,105 @@
+Title,Abbreviated Authors,Published Year,Publication,URL,Method,Domain,Organization,Behavior
+Detecting price and search discrimination on the internet,Mikians et al.,2012,HotNets,https://doi.org/10.1145/2390231.2390245,Sock puppets,Pricing,"Google
+Bing",Discrimination
+Crowd-assisted search for price discrimination in E-commerce: First results,Mikians et al.,2013,CoNEXT,https://doi.org/10.1145/2535372.2535415,Crowdsourcing,Pricing,"Amazon
+Hotels.com
+Other websites",Discrimination
+Discrimination in Online Ad Delivery,Sweeney,2013,Queue,https://doi.org/10.1145/2460276.2460278,Direct scrape,Advertising,Google,Discrimination
+Google search: Hyper-visibility as a means of rendering black women and girls invisible,Noble,2013,InVisible Culture,https://www.proquest.com/docview/1771536966,Direct scrape,Search,Google,Discrimination
+Measuring Price Discrimination and Steering on E-commerce Web Sites,Hannak et al.,2014,IMC,https://doi.org/10.1145/2663716.2663744,"Crowdsourcing
+Sock puppets",Pricing,"WalMart
+Expedia
+Orbitz",Discrimination
+Unequal Representation and Gender Stereotypes in Image Search Results for Occupations,Kay et al.,2015,CHI,https://doi.org/10.1145/2702123.2702520,Direct scrape,Search,Google,Discrimination
+An Empirical Analysis of Algorithmic Pricing on Amazon Marketplace,Chen et al.,2016,WWW,https://doi.org/10.1145/2872427.2883089,Direct scrape,Pricing,Amazon,Discrimination
+Bias in Online freelance marketplaces: Evidence from TaskRabbit and Fiverr,Hannak et al.,2017,CSCW,https://doi.org/10.1145/2998181.2998327,Direct scrape,Search,"TaskRabbit
+Fiverr",Discrimination
+Tracking gendered streams,Eriksson and Johansson,2017,Culture Unbound,https://doi.org/10.3384/cu.2000.1525.1792163,Sock puppets,Recommendation,Spotify,Discrimination
+An Empirical Study on Online Price Differentiation,Hupperich et al.,2018,CODASPY,https://doi.org/10.1145/3176258.3176338,Sock puppets,Pricing,"Booking.com
+Hotels.com
+Other websites",Discrimination
+Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification,Buolamwini and Gebru,2018,FAccT,http://proceedings.mlr.press/v81/buolamwini18a.html,Direct scrape,Vision,"Microsoft
+IBM
+Face++",Discrimination
+Investigating the impact of gender on rank in resume search engines,Chen et al.,2018,CHI,https://doi.org/10.1145/3173574.3174225,Direct scrape,Search,"Indeed
+Monster
+CareerBuilder",Discrimination
+Actionable auditing: Investigating the impact of publicly naming biased performance results of commercial AI products,Raji and Buolamwini,2019,AIES,https://doi.org/10.1145/3306618.3314244,Carrier puppet,Vision,"Amazon
+Kairos",Discrimination
+Algorithmic bias? An empirical study of apparent gender-based discrimination in the display of stem career ads,Lambrecht and Tucker,2019,Management Science,https://doi.org/10.1287/mnsc.2018.3093,Carrier puppet,Advertising,"Facebook
+Google AdWords
+Instagram
+Twitter",Discrimination
+Does Object Recognition Work for Everyone?,DeVries et al.,2019,CVPR,https://arxiv.org/abs/1906.02659,Direct scrape,Vision,"Microsoft
+Clarifai
+Google
+Amazon
+IBM",Discrimination
+Fairness in proprietary image tagging algorithms: A cross-platform audit on people images,Kyriakou et al.,2019,ICWSM,https://ojs.aaai.org/index.php/ICWSM/article/view/3232,Direct scrape,Vision,"Amazon
+Google
+IBM
+Microsoft
+Imagga
+Clarifai",Discrimination
+Fairness-aware ranking in search & recommendation systems with application to linkedin talent search,"Geyik, Ambler, and Kenthapadi",2019,KDD,https://doi.org/10.1145/3292500.3330691,Code,Search,LinkedIn,Discrimination
+Social B(eye)as: Human and machine descriptions of people images,Barlas et al.,2019,ICWSM,https://ojs.aaai.org/index.php/ICWSM/article/view/3255,Direct scrape,Vision,"Amazon
+Google
+IBM
+Microsoft
+Clarifai",Discrimination
+Why machine learning may lead to unfairness: Evidence from risk assessment for juvenile justice in Catalonia,Tolan et al.,2019,ICAIL,https://doi.org/10.1145/3322640.3326705,Code,Criminal Justice,"Catalonia, Spain",Discrimination
+Auditing Race and Gender Discrimination in Online Housing Market,Asplund et al.,2020,ICWSM,https://ojs.aaai.org/index.php/ICWSM/article/view/7276,Sock puppets,Advertising,Google,Discrimination
+The Risk of Racial Bias in Hate Speech Detection,Sap et al.,2020,ACL,https://doi.org/10.18653/v1/P19-1163,Direct scrape,Language Processing,Jigsaw (Google),Discrimination
+Measuring Personalization of Web Search,Hannak et al.,2013,WWW,https://doi.org/10.1145/2488388.2488435,"Crowdsourcing
+Sock puppets",Search,Google,Distortion
+"Location, Location, Location: The Impact of Geolocation on Web Search Personalization",Kliman-Silver et al.,2015,IMC,https://doi.org/10.1145/2815675.2815714,Sock puppets,Search,Google,Distortion
+MapWatch: Detecting and monitoring international border personalization on online maps,Soeller et al.,2016,WWW,https://doi.org/10.1145/2872427.2883016,Sock puppets,Mapping,Google,Distortion
+"""Be careful; Things can be worse than they appear"" - Understanding biased algorithms and users' behavior around them in rating platforms",Eslami et al.,2017,ICWSM,https://ojs.aaai.org/index.php/ICWSM/article/view/14898,Direct scrape,Search,Booking.com,Distortion
+More of the same - On spotify radio,Snickars,2017,Culture Unbound,https://doi.org/10.3384/cu.2000.1525.1792,Sock puppets,Recommendation,Spotify,Distortion
+Quantifying search bias: Investigating sources of bias for political searches in social media,Kulshrestha et al.,2017,CSCW,https://doi.org/10.1145/2998181.2998321,Direct scrape,Search,"Twitter
+Google",Distortion
+Analyzing the news coverage of personalized newspapers,Chakraborty and Ganguly,2018,ASONAM,https://doi.org/10.1109/ASONAM.2018.8508812,Sock puppets,Recommendation,New York Times,Distortion
+Are We Exposed to the Same “News” in the News Feed?: An empirical analysis of filter bubbles as information similarity for Danish Facebook users,Bechmann and Nielbo,2018,Digital Journalism,https://doi.org/10.1080/21670811.2018.1510741,Crowdsourcing,Recommendation,Facebook,Distortion
+Auditing partisan audience bias within Google search,Robertson et al.,2018,CHI,https://doi.org/10.1145/3274417,Crowdsourcing,Search,Google,Distortion
+Beyond the bubble: Assessing the diversity of political search results,Puschmann,2018,Digital Journalism,https://doi.org/10.1080/21670811.2018.1539626,Crowdsourcing,Search,Google,Distortion
+Challenging Google Search filter bubbles in social and political information: Disconforming evidence from a digital methods case study,"Courtois, Slechten, and Coenen",2018,Telematics and Informatics,https://doi.org/10.1016/j.tele.2018.07.004,Crowdsourcing,Search,Google,Distortion
+Coding the News: The role of computer code in filtering and distributing news,Weber and Kosterich,2018,Digital Journalism,https://doi.org/10.1080/21670811.2017.1366865,Code,Recommendation,Not specified,Distortion
+From ranking algorithms to ‘ranking cultures’: Investigating the modulation of visibility in YouTube search results,"Rieder, Matamoros-Fernández, and Coromina",2018,Convergence,https://doi.org/10.1177/1354856517736982,Direct scrape,Search,YouTube,Distortion
+Investigating Ad Transparency Mechanisms in Social Media: A Case Study of Facebook's Explanations,Andreou et al.,2018,NDSS,https://dx.doi.org/10.14722/ndss.2018.23204,Crowdsourcing,Advertising,Facebook,Distortion
+Search bias quantification: investigating political bias in social media and web search,Kulshrestha et al.,2018,Information Retrieval Journal,https://doi.org/10.1007/s10791-018-9341-2,Direct scrape,Search,"Google
+Twitter",Distortion
+Ad Delivery Algorithms: The Hidden Arbiters of Political Messaging,Ali et al.,2019,Preprint,https://arxiv.org/abs/1912.04255,Carrier puppet,Advertising,Facebook,Distortion
+Auditing autocomplete: Suggestion networks and recursive algorithm interrogation,Robertson et al.,2019,WebSci,https://doi.org/10.1145/3292522.3326047,Direct scrape,Search,"Google
+Bing",Distortion
+Auditing the partisanship of Google search snippets,Hu et al.,2019,WWW,https://doi.org/10.1145/3308558.3313654,Direct scrape,Search,Google,Distortion
+Bias misperceived: The role of partisanship and misinformation in YouTube comment moderation,"Jiang, Robertson, and Wilson",2019,ICWSM,https://ojs.aaai.org/index.php/ICWSM/article/view/3229,Direct scrape,Language Processing,YouTube,Distortion
+Comparing Platform “Ranking Cultures” Across Languages: The Case of Islam on YouTube in Scandinavia,Moe,2019,Social Media and Society,https://doi.org/10.1177/2056305118817038,Direct scrape,Search,YouTube,Distortion
+"Dr. Google, what can you tell me about homeopathy? Comparative study of the top10 websites in the United States, United Kingdom, France, Mexico and Spain",Cano-Orón,2019,Information and Communication ,https://doi.org/10.3145/epi.2019.mar.13,Direct scrape,Search,Google,Distortion
+Opening Up the Black Box: Auditing Google’s Top Stories Algorithm,Lurie and Mustafaraj,2019,FLAIRS,https://par.nsf.gov/biblio/10101277,Direct scrape,Recommendation,Google,Distortion
+Search as news curator: The role of Google in shaping attention to news information,Trielli and Diakopoulos,2019,CHI,https://doi.org/10.1145/3290605.3300683,Direct scrape,Search,Google,Distortion
+Search media and elections: A longitudinal investigation of political search results in the 2018 U.S. Elections,Metaxa et al.,2019,CHI,https://doi.org/10.1145/3359231,Direct scrape,Search,Google,Distortion
+You Can’t See What You Can’t See: Experimental Evidence for How Much Relevant Information May Be Missed Due to Google’s Web Search Personalisation,Lai and Luczak-Roesch,2019,ICSI,https://doi.org/10.1007/978-3-030-34971-4_17,Crowdsourcing,Search,Google,Distortion
+Auditing local news presence on Google News,Fischer et al.,2020,Nature Human Behavior,https://doi.org/10.1038/s41562-020-00954-0,Direct scrape,Search,Google,Distortion
+Auditing News Curation Systems: A Case Study Examining Algorithmic and Editorial Logic in Apple News,Bandy and Diakopoulos,2020,ICWSM,https://ojs.aaai.org/index.php/ICWSM/article/view/7277,"Direct scrape
+Crowdsourcing",Recommendation,Apple,Distortion
+Auditing radicalization pathways on YouTube,Ribeiro et al.,2020,FAccT,https://doi.org/10.1145/3351095.3372879,Direct scrape,Recommendation,YouTube,Distortion
+Measuring Misinformation in Video Search Platforms: An Audit Study on YouTube,Hussein et al.,2020,CHI,https://doi.org/10.1145/3392854,Sock puppets,Search,YouTube,Distortion
+Automated Experiments on Ad Privacy Settings,Datta et al.,2015,Privacy Enhancing Technologies,https://doi.org/10.1515/popets-2015-0007,Sock puppets,Advertising,Google,Exploitation
+Studying ad targeting with digital methods: The case of spotify,Mahler and Vonderau,2017,Culture Unbound,https://doi.org/10.3384/cu.2000.1525.1792212,Direct scrape,Advertising,Spotify,Exploitation
+The Substantial Interdependence of Wikipedia and Google: A Case Study on the Relationship Between Peer Production Communities and Information Technologies,"McMahon, Johnson, and Hecht",2017,ICWSM,https://ojs.aaai.org/index.php/ICWSM/article/view/14883,Crowdsourcing,Search,Google,Exploitation
+Unveiling and Quantifying Facebook Exploitation of Sensitive Personal Data for Advertising Purposes,"Cabanas, Cuevas, and Cuevas",2018,USENIX Security,https://dl.acm.org/doi/abs/10.5555/3277203.3277240,Crowdsourcing,Advertising,Facebook,Exploitation
+Measuring the Importance of User-Generated Content to Search Engines,Vincent et al.,2019,ICWSM,https://ojs.aaai.org/index.php/ICWSM/article/view/3248,Direct scrape,Search,Google,Exploitation
+Out With the Old and in With the New? An Empirical Comparison of Supervised Learning Algorithms to Predict Recidivism,Duwe and Kim,2017,Criminal Justice Policy Review,https://doi.org/10.1177%2F0887403415604899,Direct scrape,Criminal Justice,Minnesota,Misjudgement
+The Accuracy of the Demographic Inferences Shown on Google's Ad Settings,Tschantz et al.,2018,WPES,https://doi.org/10.1145/3267323.3268962,Crowdsourcing,Advertising,Google,Misjudgement
+Auditing Offline Data Brokers via Facebook's Advertising Platform,Venkatadri,2019,WWW,https://doi.org/10.1145/3308558.3313666,Crowdsourcing,Advertising,"Facebook
+Acxiom
+Epsiolon
+Experian
+Oracle (Datalogix)",Misjudgement
+Better Practices in the Development and Validation of Recidivism Risk Assessments: The Minnesota Sex Offender Screening Tool–4,Duwe,2019,Criminal Justice Policy Review,https://doi.org/10.1177%2F0887403417718608,Direct scrape,Criminal Justice,Minnesota,Misjudgement
+Quantity vs. Quality: Evaluating User Interest Profiles Using Ad Preference Managers,Bashir et al.,2019,NDSS,https://doi.org/10.14722/ndss.2019.23392,Crowdsourcing,Advertising,"Google
+Facebook
+Oracle
+Neilsen",Misjudgement
+The right to confront your accusers: Opening the black box of forensic DNA software,Matthews et al.,2019,AIES,https://doi.org/10.1145/3306618.3314279,Code,Criminal Justice,New York City,Misjudgement
+Facebook Ads Monitor: An Independent Auditing System for Political Ads on Facebook,Silva et al.,2020,WWW,https://doi.org/10.1145/3366423.3380109,Crowdsourcing,Advertising,Facebook,Misjudgement
