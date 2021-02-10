@@ -76,6 +76,7 @@ The algorithm presents media that distorts or obscures an underlying reality. Fo
 * [Opening Up the Black Box: Auditing Google’s Top Stories Algorithm](https://par.nsf.gov/biblio/10101277) (Lurie and Mustafaraj, 2019)
 * [Auditing radicalization pathways on YouTube](https://doi.org/10.1145/3351095.3372879) (Ribeiro et al., 2020)
 * [Auditing News Curation Systems: A Case Study Examining Algorithmic and Editorial Logic in Apple News](https://ojs.aaai.org/index.php/ICWSM/article/view/7277) (Bandy and Diakopoulos, 2020)
+* [Measuring Misinformation in Video Search Platforms: An Audit Study on YouTube](https://doi.org/10.1145/3392854) (Hussein and Juneja et al., 2020)
 #### Advertising
 * [Investigating Ad Transparency Mechanisms in Social Media: A Case Study of Facebook's Explanations](https://dx.doi.org/10.14722/ndss.2018.23204) (Andreou et al., 2018)
 * [Ad Delivery Algorithms: The Hidden Arbiters of Political Messaging](https://arxiv.org/abs/1912.04255) (Ali et al., 2019)
