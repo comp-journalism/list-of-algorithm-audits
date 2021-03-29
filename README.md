@@ -34,13 +34,14 @@ The algorithm disparately treats or disparately impacts people on the basis of t
 * [Fairness-aware ranking in search & recommendation systems with application to linkedin talent search](https://doi.org/10.1145/3292500.3330691) (Geyik, Ambler, and Kenthapadi, 2019)
 #### Recommendation
 * [Tracking gendered streams](https://doi.org/10.3384/cu.2000.1525.1792163) (Eriksson and Johansson, 2017)
-Vision
+* [Building and Auditing Fair Algorithms: A Case Study in Candidate Screening](https://doi.org/10.1145/3442188.3445928) (Wilson et al., 2021)
+#### Computer Vision
 * [Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification](http://proceedings.mlr.press/v81/buolamwini18a.html) (Buolamwini and Gebru, 2018)
 * [Actionable auditing: Investigating the impact of publicly naming biased performance results of commercial AI products](https://doi.org/10.1145/3306618.3314244) (Raji and Buolamwini, 2019)
 * [Does Object Recognition Work for Everyone?](https://arxiv.org/abs/1906.02659) (DeVries et al., 2019)
 * [Fairness in proprietary image tagging algorithms: A cross-platform audit on people images](https://ojs.aaai.org/index.php/ICWSM/article/view/3232) (Kyriakou et al., 2019)
 * [Social B(eye)as: Human and machine descriptions of people images](https://ojs.aaai.org/index.php/ICWSM/article/view/3255) (Barlas et al., 2019)
-Criminal Justice
+### Criminal Justice
 * [Why machine learning may lead to unfairness: Evidence from risk assessment for juvenile justice in Catalonia](https://doi.org/10.1145/3322640.3326705) (Tolan et al., 2019)
 #### Language Processing
 * [The Risk of Racial Bias in Hate Speech Detection](https://doi.org/10.18653/v1/P19-1163) (Sap et al., 2020)
@@ -77,6 +78,7 @@ The algorithm presents media that distorts or obscures an underlying reality. Fo
 * [Auditing radicalization pathways on YouTube](https://doi.org/10.1145/3351095.3372879) (Ribeiro et al., 2020)
 * [Auditing News Curation Systems: A Case Study Examining Algorithmic and Editorial Logic in Apple News](https://ojs.aaai.org/index.php/ICWSM/article/view/7277) (Bandy and Diakopoulos, 2020)
 * [Measuring Misinformation in Video Search Platforms: An Audit Study on YouTube](https://doi.org/10.1145/3392854) (Hussein and Juneja et al., 2020)
+* [When the Umpire is also a Player: Bias in Private Label Product Recommendations on E-commerce Marketplaces](https://doi.org/10.1145/3442188.3445944) (Dash et al., 2021)
 #### Advertising
 * [Investigating Ad Transparency Mechanisms in Social Media: A Case Study of Facebook's Explanations](https://dx.doi.org/10.14722/ndss.2018.23204) (Andreou et al., 2018)
 * [Ad Delivery Algorithms: The Hidden Arbiters of Political Messaging](https://arxiv.org/abs/1912.04255) (Ali et al., 2019)
