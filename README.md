@@ -41,7 +41,7 @@ The algorithm disparately treats or disparately impacts people on the basis of t
 * [Does Object Recognition Work for Everyone?](https://arxiv.org/abs/1906.02659) (DeVries et al., 2019)
 * [Fairness in proprietary image tagging algorithms: A cross-platform audit on people images](https://ojs.aaai.org/index.php/ICWSM/article/view/3232) (Kyriakou et al., 2019)
 * [Social B(eye)as: Human and machine descriptions of people images](https://ojs.aaai.org/index.php/ICWSM/article/view/3255) (Barlas et al., 2019)
-### Criminal Justice
+#### Criminal Justice
 * [Why machine learning may lead to unfairness: Evidence from risk assessment for juvenile justice in Catalonia](https://doi.org/10.1145/3322640.3326705) (Tolan et al., 2019)
 #### Language Processing
 * [The Risk of Racial Bias in Hate Speech Detection](https://doi.org/10.18653/v1/P19-1163) (Sap et al., 2020)
