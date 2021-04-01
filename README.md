@@ -67,6 +67,7 @@ The algorithm presents media that distorts or obscures an underlying reality. Fo
 * [Auditing autocomplete: Suggestion networks and recursive algorithm interrogation](https://doi.org/10.1145/3292522.3326047) (Robertson et al., 2019)
 * [Auditing local news presence on Google News](https://doi.org/10.1038/s41562-020-00954-0) (Fischer et al., 2020)
 * [Measuring Misinformation in Video Search Platforms: An Audit Study on YouTube](https://doi.org/10.1145/3392854) (Hussein et al., 2020)
+* [The Media Coverage of the 2020 US Presidential Election Candidates through the Lens of Google’s Top Stories](https://ojs.aaai.org/index.php/ICWSM/article/view/7352) (Kawakami et al., 2020)
 #### Mapping
 * [MapWatch: Detecting and monitoring international border personalization on online maps](https://doi.org/10.1145/2872427.2883016) (Soeller et al., 2016)
 #### Recommendation
