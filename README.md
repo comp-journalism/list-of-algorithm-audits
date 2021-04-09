@@ -26,6 +26,7 @@ The algorithm disparately treats or disparately impacts people on the basis of t
 * [Discrimination in Online Ad Delivery](https://doi.org/10.1145/2460276.2460278) (Sweeney, 2013)
 * [Algorithmic bias? An empirical study of apparent gender-based discrimination in the display of stem career ads](https://doi.org/10.1287/mnsc.2018.3093) (Lambrecht and Tucker, 2019)
 * [Auditing Race and Gender Discrimination in Online Housing Market](https://ojs.aaai.org/index.php/ICWSM/article/view/7276) (Asplund et al., 2020)
+* [Auditing for Discrimination in Algorithms Delivering Job Ads](https://ant.isi.edu/datasets/addelivery/Discrimination-Job-Ad-Delivery.pdf) (Imana et al., 2021)
 #### Search
 * [Google search: Hyper-visibility as a means of rendering black women and girls invisible](https://www.proquest.com/docview/1771536966) (Noble, 2013)
 * [Unequal Representation and Gender Stereotypes in Image Search Results for Occupations](https://doi.org/10.1145/2702123.2702520) (Kay et al., 2015)
