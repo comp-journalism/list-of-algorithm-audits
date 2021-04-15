@@ -1,5 +1,5 @@
 # list-of-algorithm-audits
-A continually-updated list of studies from the CSCW 2021 paper, "Problematic Machine Behavior: A Systematic Literature Review of Algorithm Audits"
+A continually-updated list of studies from the CSCW 2021 paper, "[Problematic Machine Behavior: A Systematic Literature Review of Algorithm Audits](https://arxiv.org/abs/2102.04256)"
 
 Repository is a work-in-progress, open to the community for edits.
 
