@@ -102,8 +102,8 @@ The algorithm inappropriately uses content from other sources and/or sensitive p
 
 
 
-### Misjudgement
-The algorithm makes incorrect predictions or classifications. Notably, mijudgement can often lead to discrimination, distortion, and/or exploitation, but some studies in the review focused on this initial error of misjudgement without exploring second-order problematic effects. An algorithm implicated in misjudgement may incorrectly classify a user’s employment status or mislabel a piece of political news as being primarily about sports, for example.
+### Misjudgment
+The algorithm makes incorrect predictions or classifications. Notably, misjudgment can often lead to discrimination, distortion, and/or exploitation, but some studies in the review focused on this initial error of misjudgment without exploring second-order problematic effects. An algorithm implicated in misjudgment may incorrectly classify a user’s employment status or mislabel a piece of political news as being primarily about sports, for example.
 
 #### Criminal Justice
 * [Out With the Old and in With the New? An Empirical Comparison of Supervised Learning Algorithms to Predict Recidivism](https://doi.org/10.1177%2F0887403415604899) (Duwe and Kim, 2017)
