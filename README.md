@@ -10,7 +10,7 @@ To add a study, simply create an issue or pull request.
 **Algorithm Audit:** an empirical study investigating a public algorithmic system for potential problematic behavior.
 * **empirical study**: includes an experiment or analysis (quantitative or qualitative) that generates evidence-based claims with well-defined outcome metrics. It must not be purely an opinion/position paper, although position papers with substantial empirical components were included
 * **algorithmic system**:  is any socio-technical system influenced by at least one algorithm. This includes systems that may rely on human judgement and/or other non-algorithmic components, as long as they include at least one algorithm.
-* **public**: algorithmic system is one used in a commercial context or other public setting such as law enforcement, education, criminal justice, or public transportation
+* **public**: algorithmic system is one used in a commercial context or other public setting such as law enforcement, education, criminal punishment, or public transportation
 * **problematic behavior**: in this study refers to discrimination, distortion, exploitation, or mis- judgement, as well as various types of behaviors within each of these categories. A behavior is problematic when it causes harm (or potential harm). In the ACM Code of Ethics, examples of harm include "unjustified physical or mental injury, unjustified destruction or disclosure of information, and unjustified damage to property, reputation, and the environment."
 
 
@@ -45,7 +45,7 @@ The algorithm disparately treats or disparately impacts people on the basis of t
 * [Does Object Recognition Work for Everyone?](https://arxiv.org/abs/1906.02659) (DeVries et al., 2019)
 * [Fairness in proprietary image tagging algorithms: A cross-platform audit on people images](https://ojs.aaai.org/index.php/ICWSM/article/view/3232) (Kyriakou et al., 2019)
 * [Social B(eye)as: Human and machine descriptions of people images](https://ojs.aaai.org/index.php/ICWSM/article/view/3255) (Barlas et al., 2019)
-#### Criminal Justice
+#### Criminal Punishment
 * [Why machine learning may lead to unfairness: Evidence from risk assessment for juvenile justice in Catalonia](https://doi.org/10.1145/3322640.3326705) (Tolan et al., 2019)
 #### Language Processing
 * [The Risk of Racial Bias in Hate Speech Detection](https://doi.org/10.18653/v1/P19-1163) (Sap et al., 2020)
@@ -107,11 +107,10 @@ The algorithm inappropriately uses content from other sources and/or sensitive p
 
 ### Misjudgment
 The algorithm makes incorrect predictions or classifications. Notably, misjudgment can often lead to discrimination, distortion, and/or exploitation, but some studies in the review focused on this initial error of misjudgment without exploring second-order problematic effects. An algorithm implicated in misjudgment may incorrectly classify a user’s employment status or mislabel a piece of political news as being primarily about sports, for example.
-#### Criminal Justice
+#### Criminal Punishment
 * [Out With the Old and in With the New? An Empirical Comparison of Supervised Learning Algorithms to Predict Recidivism](https://doi.org/10.1177%2F0887403415604899) (Duwe and Kim, 2017)
 * [Better Practices in the Development and Validation of Recidivism Risk Assessments: The Minnesota Sex Offender Screening Tool–4](https://doi.org/10.1177%2F0887403417718608) (Duwe, 2019)
 * [The right to confront your accusers: Opening the black box of forensic DNA software](https://doi.org/10.1145/3306618.3314279) (Matthews et al., 2019)
-*
 #### Advertising
 * [The Accuracy of the Demographic Inferences Shown on Google's Ad Settings](https://doi.org/10.1145/3267323.3268962) (Tschantz et al., 2018)
 * [Auditing Offline Data Brokers via Facebook's Advertising Platform](https://doi.org/10.1145/3308558.3313666) (Venkatadri, 2019)
