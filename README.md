@@ -1,4 +1,4 @@
-# list-of-algorithm-audits
+# List of Algorithm Audits
 A continually-updated list of studies from the CSCW 2021 paper, "[Problematic Machine Behavior: A Systematic Literature Review of Algorithm Audits](https://arxiv.org/abs/2102.04256)"
 
 Repository is a work-in-progress, open to the community for edits.
@@ -13,7 +13,10 @@ To add a study, simply create an issue or pull request.
 * **public**: algorithmic system is one used in a commercial context or other public setting such as law enforcement, education, criminal justice, or public transportation
 * **problematic behavior**: in this study refers to discrimination, distortion, exploitation, or mis- judgement, as well as various types of behaviors within each of these categories. A behavior is problematic when it causes harm (or potential harm). In the ACM Code of Ethics, examples of harm include "unjustified physical or mental injury, unjustified destruction or disclosure of information, and unjustified damage to property, reputation, and the environment."
 
+
+
 ## Studies
+
 ### Discrimination
 The algorithm disparately treats or disparately impacts people on the basis of their race, age, gender, location, socioeconomic status, and/or intersectional identity. For example, an algorithm implicated in discrimination may systematically favor people who identify as males, or reinforce harmful stereotypes about elderly people.
 #### Pricing
@@ -46,6 +49,8 @@ The algorithm disparately treats or disparately impacts people on the basis of t
 * [Why machine learning may lead to unfairness: Evidence from risk assessment for juvenile justice in Catalonia](https://doi.org/10.1145/3322640.3326705) (Tolan et al., 2019)
 #### Language Processing
 * [The Risk of Racial Bias in Hate Speech Detection](https://doi.org/10.18653/v1/P19-1163) (Sap et al., 2020)
+
+
 
 ### Distortion
 The algorithm presents media that distorts or obscures an underlying reality. For example, an algorithm implicated in distortion may favor content from a given political perspective, hyper-personalize output for different users, change its output frequently and without good reason, or provide misleading information to users.
@@ -81,17 +86,15 @@ The algorithm presents media that distorts or obscures an underlying reality. Fo
 * [Auditing News Curation Systems: A Case Study Examining Algorithmic and Editorial Logic in Apple News](https://ojs.aaai.org/index.php/ICWSM/article/view/7277) (Bandy and Diakopoulos, 2020)
 * [Measuring Misinformation in Video Search Platforms: An Audit Study on YouTube](https://doi.org/10.1145/3392854) (Hussein and Juneja et al., 2020)
 * [When the Umpire is also a Player: Bias in Private Label Product Recommendations on E-commerce Marketplaces](https://doi.org/10.1145/3442188.3445944) (Dash et al., 2021)
+* [Auditing E-Commerce Platforms for Algorithmically Curated Vaccine Misinformation](https://doi.org/10.1145/3411764.3445250) (Juneja and Mitra, 2021)
 #### Advertising
 * [Investigating Ad Transparency Mechanisms in Social Media: A Case Study of Facebook's Explanations](https://dx.doi.org/10.14722/ndss.2018.23204) (Andreou et al., 2018)
 * [Ad Delivery Algorithms: The Hidden Arbiters of Political Messaging](https://arxiv.org/abs/1912.04255) (Ali et al., 2019)
-Language Processing
+#### Language Processing
 * [Bias misperceived: The role of partisanship and misinformation in YouTube comment moderation](https://ojs.aaai.org/index.php/ICWSM/article/view/3229) (Jiang, Robertson, and Wilson, 2019)
-
-
-
+* [“I Can’t Reply with That”: Characterizing Problematic Email Reply Suggestions](https://doi.org/10.1145/3411764.3445557) (Robertson et al., 2021)
 ### Exploitation
 The algorithm inappropriately uses content from other sources and/or sensitive personal information from people. For example, an algorithm implicated in exploitation may infer sensitive personal information from users without proper consent, or feature content from an outside source without attribution.
-
 #### Advertising
 * [Automated Experiments on Ad Privacy Settings](https://doi.org/10.1515/popets-2015-0007) (Datta et al., 2015)
 * [Studying ad targeting with digital methods: The case of spotify](https://doi.org/10.3384/cu.2000.1525.1792212) (Mahler and Vonderau, 2017)
@@ -104,11 +107,11 @@ The algorithm inappropriately uses content from other sources and/or sensitive p
 
 ### Misjudgment
 The algorithm makes incorrect predictions or classifications. Notably, misjudgment can often lead to discrimination, distortion, and/or exploitation, but some studies in the review focused on this initial error of misjudgment without exploring second-order problematic effects. An algorithm implicated in misjudgment may incorrectly classify a user’s employment status or mislabel a piece of political news as being primarily about sports, for example.
-
 #### Criminal Justice
 * [Out With the Old and in With the New? An Empirical Comparison of Supervised Learning Algorithms to Predict Recidivism](https://doi.org/10.1177%2F0887403415604899) (Duwe and Kim, 2017)
 * [Better Practices in the Development and Validation of Recidivism Risk Assessments: The Minnesota Sex Offender Screening Tool–4](https://doi.org/10.1177%2F0887403417718608) (Duwe, 2019)
 * [The right to confront your accusers: Opening the black box of forensic DNA software](https://doi.org/10.1145/3306618.3314279) (Matthews et al., 2019)
+*
 #### Advertising
 * [The Accuracy of the Demographic Inferences Shown on Google's Ad Settings](https://doi.org/10.1145/3267323.3268962) (Tschantz et al., 2018)
 * [Auditing Offline Data Brokers via Facebook's Advertising Platform](https://doi.org/10.1145/3308558.3313666) (Venkatadri, 2019)
