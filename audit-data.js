@@ -654,7 +654,7 @@ const DATA = [
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "Germany, Switzerland",
-    "DOI": "",
+    "DOI": "https://ijoc.org/index.php/ijoc/article/view/18687",
     "Title": "Blame It on the Algorithm? Russian Government-Sponsored Media and Algorithmic Curation of Political Information on Facebook",
     "Authors": "Elizaveta Kuznetsova and Mykola Makhortykh",
     "Source": "Urman et al. (2025)"
