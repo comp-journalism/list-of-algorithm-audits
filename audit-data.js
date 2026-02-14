@@ -2604,8 +2604,8 @@ const DATA = [
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
-    "DOI": "",
-    "Title": "Discrimination in Online Ad Delivery: Google ads, black names and white names, racial discrimination, and click advertising. Queue 11, 3 (March 2013), 10–29.Crossref",
+    "DOI": "https://doi.org/10.1145/2460276.2460278",
+    "Title": "Discrimination in Online Ad Delivery: Google ads, black names and white names, racial discrimination, and click advertising",
     "Authors": "Latanya Sweeney",
     "Source": "Urman et al. (2025)"
   },
@@ -2637,21 +2637,6 @@ const DATA = [
     "DOI": "https://doi.org/10.1145/2390231.2390245",
     "Title": "Detecting price and search discrimination on the internet",
     "Authors": "Mikians et al.",
-    "Source": "2021 Review (Bandy)"
-  },
-  {
-    "Year": "2013",
-    "Organization": "Google",
-    "Behavior": "Discrimination",
-    "Specific Behavior": "Discrimination (other), Personalization",
-    "Method": "Direct scrape",
-    "Domain": "Advertising",
-    "Language": "English",
-    "Country Studied": "US",
-    "Country of Researchers": "US",
-    "DOI": "https://doi.org/10.1145/2460276.2460278",
-    "Title": "Discrimination in Online Ad Delivery",
-    "Authors": "Sweeney",
     "Source": "2021 Review (Bandy)"
   },
   {
