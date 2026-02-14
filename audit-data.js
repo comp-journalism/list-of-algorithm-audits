@@ -670,7 +670,7 @@ const DATA = [
     "Country Studied": "Mixed",
     "Country of Researchers": "Japan",
     "DOI": "https://doi.org/10.3389/frai.2023.1232003",
-    "Title": "Revisiting the political biases of ChatGPT.",
+    "Title": "Revisiting the political biases of ChatGPT",
     "Authors": "Sasuke Fujimoto and Kazuhiro Takemoto",
     "Source": "Urman et al. (2025)"
   },
@@ -849,7 +849,7 @@ const DATA = [
     "Language": "Indonesian, English",
     "Country Studied": "Indonesia",
     "Country of Researchers": "US",
-    "DOI": "",
+    "DOI": "https://par.nsf.gov/servlets/purl/10497344",
     "Title": "Multilingual Analysis of YouTube’s Recommendation System: Examining Topic and Emotion Drift in the ‘Cheng Ho’ Narrative",
     "Authors": "",
     "Source": "Urman et al. (2025)"
@@ -6685,7 +6685,7 @@ const DATA = [
     "Country Studied": "RU",
     "Country of Researchers": "RU",
     "DOI": "https://doi.org/10.14530/se.2024.2.071-092",
-    "Title": "Spatial Algorithmic Bias in Socio-Economic Clustering of Russian Regions; Пространственная алгоритмическая предвзятость в социально-экономической кластеризации российских регионов",
+    "Title": "Spatial Algorithmic Bias in Socio-Economic Clustering of Russian Regions",
     "Authors": "Blanutsa",
     "Source": "NEEDS HUMAN REVIEW"
   },
@@ -8905,9 +8905,9 @@ const DATA = [
     "Country Studied": "US",
     "Country of Researchers": "Australia",
     "DOI": "https://doi.org/10.4324/9781003170884-18",
-    "Title": "AD ACCOUNTABILITY ONLINE: A methodological approach",
+    "Title": "Ad Accountability Online: A methodological approach",
     "Authors": "Andrejevic et al.",
-    "Source": "NEEDS HUMAN REVIEW"
+    "Source": "2026 Review (Bandy)"
   },
   {
     "Year": "2022",
