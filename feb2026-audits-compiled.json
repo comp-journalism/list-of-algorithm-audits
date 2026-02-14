@@ -1804,15 +1804,15 @@
     "Organization": "YouTube",
     "Behavior": "Distortion",
     "Specific Behavior": "Harmful content, Personalization",
-    "Method": "Persona scrape",
-    "Domain": "Recommendation",
+    "Method": "Sock puppets",
+    "Domain": "Search",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1145/3392854",
-    "Title": "Measuring Misinformation in Video Search Platforms: An Audit Study on YouTube. Proceedings of the ACM on Human-Computer Interaction 4, CSCW1 (May 2020),",
-    "Authors": "Eslam Hussein, Prerna Juneja, and Tanushree Mitra",
-    "Source": "Urman et al."
+    "Title": "Measuring Misinformation in Video Search Platforms: An Audit Study on YouTube",
+    "Authors": "Hussein et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2020",
@@ -1834,60 +1834,60 @@
     "Organization": "YouTube",
     "Behavior": "Distortion",
     "Specific Behavior": "Harmful content",
-    "Method": "Non-persona scrape",
+    "Method": "Direct scrape",
     "Domain": "Recommendation",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "Switzerland, Brazil",
     "DOI": "https://doi.org/10.1145/3351095.3372879",
     "Title": "Auditing radicalization pathways on YouTube",
-    "Authors": "Manoel Horta Ribeiro, Raphael Ottoni, Robert West, Virgílio A. F. Almeida, and Wagner Meira",
-    "Source": "Urman et al."
+    "Authors": "Ribeiro et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2020",
     "Organization": "Google",
     "Behavior": "Discrimination",
     "Specific Behavior": "Discrimination",
-    "Method": "Persona scrape",
-    "Domain": "Ad delivery",
+    "Method": "Sock puppets",
+    "Domain": "Advertising",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1609/icwsm.v14i1.7276",
-    "Title": "Auditing Race and Gender Discrimination in Online Housing Markets. Proceedings of the International AAAI Conference on Web and Social Media 14 (May 2020), 24–35.Crossref",
-    "Authors": "Joshua Asplund, Motahhare Eslami, Hari Sundaram, Christian Sandvig, and Karrie Karahalios",
-    "Source": "Urman et al."
+    "Title": "Auditing Race and Gender Discrimination in Online Housing Market",
+    "Authors": "Asplund et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2020",
-    "Organization": "Apple News",
+    "Organization": "Apple",
     "Behavior": "Distortion",
     "Specific Behavior": "News distribution, Information quality",
-    "Method": "Persona scrape, Crowdsourcing",
+    "Method": "Direct scrape\nCrowdsourcing",
     "Domain": "Recommendation",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1609/icwsm.v14i1.7277",
-    "Title": "Auditing News Curation Systems: A Case Study Examining Algorithmic and Editorial Logic in Apple News. Proceedings of the International AAAI Conference on Web and Social Media 14 (May 2020),",
-    "Authors": "Jack Bandy and Nicholas Diakopoulos",
-    "Source": "Urman et al."
+    "Title": "Auditing News Curation Systems: A Case Study Examining Algorithmic and Editorial Logic in Apple News",
+    "Authors": "Bandy and Diakopoulos",
+    "Source": "2021 Review"
   },
   {
     "Year": "2020",
     "Organization": "Google",
     "Behavior": "Distortion",
     "Specific Behavior": "News distribution, Personalization, Information quality",
-    "Method": "Persona scrape",
+    "Method": "Direct scrape",
     "Domain": "Search",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1038/s41562-020-00954-0",
     "Title": "Auditing local news presence on Google News",
-    "Authors": "Sean Fischer, Kokil Jaidka, and Yphtach Lelkes",
-    "Source": "Urman et al."
+    "Authors": "Fischer et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2020",
@@ -1910,14 +1910,14 @@
     "Behavior": "Misjudgement",
     "Specific Behavior": "Information quality",
     "Method": "Crowdsourcing",
-    "Domain": "Ad delivery",
+    "Domain": "Advertising",
     "Language": "Portuguese",
     "Country Studied": "Brazil",
     "Country of Researchers": "Brazil, France",
     "DOI": "https://doi.org/10.1145/3366423.3380109",
     "Title": "Facebook Ads Monitor: An Independent Auditing System for Political Ads on Facebook",
-    "Authors": "Márcio Silva, Lucas Santos De Oliveira, Athanasios Andreou, Pedro Olmo Vaz De Melo, Oana Goga, and Fabricio Benevenuto",
-    "Source": "Urman et al."
+    "Authors": "Silva et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
@@ -1939,18 +1939,18 @@
     "Organization": "YouTube",
     "Behavior": "Distortion",
     "Specific Behavior": "Information quality",
-    "Method": "Non-persona scrape",
+    "Method": "Direct scrape",
     "Domain": "Search",
     "Language": "Danish, Norwegian, Swedish",
     "Country Studied": "Denmark, Norway, Sweden",
     "Country of Researchers": "Norway",
     "DOI": "https://doi.org/10.1177/2056305118817038",
     "Title": "Comparing Platform “Ranking Cultures” Across Languages: The Case of Islam on YouTube in Scandinavia",
-    "Authors": "Hallvard Moe",
-    "Source": "Urman et al."
+    "Authors": "Moe",
+    "Source": "2021 Review"
   },
   {
-    "Year": "2019",
+    "Year": "2018",
     "Organization": "Google",
     "Behavior": "Distortion",
     "Specific Behavior": "News distribution, Personalization, Information quality",
@@ -1960,9 +1960,9 @@
     "Country Studied": "Germany",
     "Country of Researchers": "Germany",
     "DOI": "https://doi.org/10.1080/21670811.2018.1539626",
-    "Title": "Beyond the Bubble: Assessing the Diversity of Political Search Results",
-    "Authors": "Cornelius Puschmann",
-    "Source": "Urman et al."
+    "Title": "Beyond the bubble: Assessing the diversity of political search results",
+    "Authors": "Puschmann",
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
@@ -1976,38 +1976,38 @@
     "Country of Researchers": "New Zealand",
     "DOI": "https://doi.org/10.1007/978-3-030-34971-4_17",
     "Title": "You Can’t See What You Can’t See: Experimental Evidence for How Much Relevant Information May Be Missed Due to Google’s Web Search Personalisation",
-    "Authors": "Cameron Lai and Markus Luczak-Roesch",
-    "Source": "Urman et al."
+    "Authors": "Lai and Luczak-Roesch",
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
     "Organization": "Google",
     "Behavior": "Distortion",
     "Specific Behavior": "Information quality",
-    "Method": "Non-persona scrape",
+    "Method": "Direct scrape",
     "Domain": "Search",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1145/3308558.3313654",
-    "Title": "Auditing the Partisanship of Google Search Snippets",
-    "Authors": "Desheng Hu, Shan Jiang, Ronald E. Robertson, and Christo Wilson",
-    "Source": "Urman et al."
+    "Title": "Auditing the partisanship of Google search snippets",
+    "Authors": "Hu et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
     "Organization": "Google",
     "Behavior": "Distortion",
     "Specific Behavior": "Information quality, News distribution",
-    "Method": "Non-persona scrape",
-    "Domain": "Search",
+    "Method": "Direct scrape",
+    "Domain": "Recommendation",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://par.nsf.gov/biblio/10101277",
     "Title": "Opening Up the Black Box: Auditing Google’s Top Stories Algorithm",
     "Authors": "Lurie and Mustafaraj",
-    "Source": "Urman et al."
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
@@ -2025,154 +2025,154 @@
     "Source": "Urman et al."
   },
   {
-    "Year": "2019",
-    "Organization": "Twitter, Google",
+    "Year": "2018",
+    "Organization": "Google\nTwitter",
     "Behavior": "Distortion",
     "Specific Behavior": "Information quality",
-    "Method": "Non-persona scrape",
+    "Method": "Direct scrape",
     "Domain": "Search",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US, Germany",
     "DOI": "https://doi.org/10.1007/s10791-018-9341-2",
     "Title": "Search bias quantification: investigating political bias in social media and web search",
-    "Authors": "Juhi Kulshrestha, Motahhare Eslami, Johnnatan Messias, Muhammad Bilal Zafar, Saptarshi Ghosh, Krishna P. Gummadi, and Karrie Karahalios",
-    "Source": "Urman et al."
+    "Authors": "Kulshrestha et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
     "Organization": "Google",
     "Behavior": "Distortion",
     "Specific Behavior": "News distribution, Information quality",
-    "Method": "Non-persona scrape",
+    "Method": "Direct scrape",
     "Domain": "Search",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1145/3290605.3300683",
-    "Title": "Search as News Curator: The Role of Google in Shaping Attention to News Information",
-    "Authors": "Daniel Trielli and Nicholas Diakopoulos",
-    "Source": "Urman et al."
+    "Title": "Search as news curator: The role of Google in shaping attention to news information",
+    "Authors": "Trielli and Diakopoulos",
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
-    "Organization": "Facebook, Google, Instagram, Twitter",
+    "Organization": "Facebook\nGoogle AdWords\nInstagram\nTwitter",
     "Behavior": "Discrimination",
     "Specific Behavior": "Discrimination",
-    "Method": "Repurposing",
-    "Domain": "Ad delivery",
+    "Method": "Carrier puppet",
+    "Domain": "Advertising",
     "Language": "English",
     "Country Studied": "Comprehensive",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1287/mnsc.2018.3093",
-    "Title": "Algorithmic Bias? An Empirical Study of Apparent Gender-Based Discrimination in the Display of STEM Career Ads",
-    "Authors": "Anja Lambrecht and Catherine Tucker",
-    "Source": "Urman et al."
+    "Title": "Algorithmic bias? An empirical study of apparent gender-based discrimination in the display of stem career ads",
+    "Authors": "Lambrecht and Tucker",
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
     "Organization": "LinkedIn",
     "Behavior": "Discrimination",
     "Specific Behavior": "Discrimination",
-    "Method": "Platform-led experiment",
+    "Method": "Code",
     "Domain": "Search",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1145/3292500.3330691",
-    "Title": "Fairness-Aware Ranking in Search & Recommendation Systems with Application to LinkedIn Talent Search",
-    "Authors": "Sahin Cem Geyik, Stuart Ambler, and Krishnaram Kenthapadi",
-    "Source": "Urman et al."
+    "Title": "Fairness-aware ranking in search & recommendation systems with application to linkedin talent search",
+    "Authors": "Geyik, Ambler, and Kenthapadi",
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
     "Organization": "Google",
     "Behavior": "Distortion",
     "Specific Behavior": "Information quality",
-    "Method": "Non-persona scrape",
+    "Method": "Direct scrape",
     "Domain": "Search",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1145/3359231",
-    "Title": "Search Media and Elections: A Longitudinal Investigation of Political Search Results. Proceedings of the ACM on Human-Computer Interaction 3, CSCW (Nov. 2019),",
-    "Authors": "Danaë Metaxa, Joon Sung Park, James A. Landay, and Jeff Hancock",
-    "Source": "Urman et al."
+    "Title": "Search media and elections: A longitudinal investigation of political search results in the 2018 U.S. Elections",
+    "Authors": "Metaxa et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
-    "Organization": "Google, Bing",
+    "Organization": "Google\nBing",
     "Behavior": "Distortion",
     "Specific Behavior": "Information quality",
-    "Method": "Non-persona scrape",
+    "Method": "Direct scrape",
     "Domain": "Search",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1145/3292522.3326047",
-    "Title": "Auditing Autocomplete: Suggestion Networks and Recursive Algorithm Interrogation",
-    "Authors": "Ronald E. Robertson, Shan Jiang, David Lazer, and Christo Wilson",
-    "Source": "Urman et al."
+    "Title": "Auditing autocomplete: Suggestion networks and recursive algorithm interrogation",
+    "Authors": "Robertson et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
     "Organization": "Google",
     "Behavior": "Distortion",
     "Specific Behavior": "Information quality",
-    "Method": "Non-persona scrape",
+    "Method": "Direct scrape",
     "Domain": "Search",
     "Language": "English, Spanish, French",
     "Country Studied": "Spain, France, Mexico, US, UK",
     "Country of Researchers": "Spain",
     "DOI": "https://doi.org/10.3145/epi.2019.mar.13",
     "Title": "Dr. Google, what can you tell me about homeopathy? Comparative study of the top10 websites in the United States, United Kingdom, France, Mexico and Spain",
-    "Authors": "Lorena Cano-Orón",
-    "Source": "Urman et al."
+    "Authors": "Cano-Orón",
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
-    "Organization": "Facebook, Acxiom, Epsiolon, Experian, Oracle (Datalogix)",
+    "Organization": "Facebook\nAcxiom\nEpsiolon\nExperian\nOracle (Datalogix)",
     "Behavior": "Misjudgement",
     "Specific Behavior": "Group misrepresentation",
     "Method": "Crowdsourcing",
-    "Domain": "Ad delivery",
+    "Domain": "Advertising",
     "Language": "Mixed",
     "Country Studied": "US, Australia, UK, Germany, France, Brazil, Japan",
     "Country of Researchers": "US, Germany",
     "DOI": "https://doi.org/10.1145/3308558.3313666",
-    "Title": "Auditing Offline Data Brokers via Facebook’s Advertising Platform",
-    "Authors": "Giridhari Venkatadri, Piotr Sapiezynski, Elissa M. Redmiles, Alan Mislove, Oana Goga, Michelle Mazurek, and Krishna P. Gummadi",
-    "Source": "Urman et al."
+    "Title": "Auditing Offline Data Brokers via Facebook's Advertising Platform",
+    "Authors": "Venkatadri",
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
-    "Organization": "Google, Facebook, Oracle BlueKai, Neilsen eXelate",
+    "Organization": "Google\nFacebook\nOracle\nNeilsen",
     "Behavior": "Misjudgement",
     "Specific Behavior": "Group misrepresentation",
     "Method": "Crowdsourcing",
-    "Domain": "Ad delivery",
+    "Domain": "Advertising",
     "Language": "Mixed",
     "Country Studied": "US, Pakistan",
     "Country of Researchers": "US, Pakistan",
     "DOI": "https://doi.org/10.14722/ndss.2019.23392",
     "Title": "Quantity vs. Quality: Evaluating User Interest Profiles Using Ad Preference Managers",
-    "Authors": "Muhammad Ahmad Bashir, Umar Farooq, Maryam Shahid, Muhammad Fareed Zaffar, and Christo Wilson",
-    "Source": "Urman et al."
+    "Authors": "Bashir et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
     "Organization": "Google",
     "Behavior": "Exploitation",
     "Specific Behavior": "Information quality",
-    "Method": "Persona scrape",
+    "Method": "Direct scrape",
     "Domain": "Search",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1609/icwsm.v13i01.3248",
-    "Title": "Measuring the Importance of User-Generated Content to Search Engines. Proceedings of the International AAAI Conference on Web and Social Media 13 (July 2019),",
-    "Authors": "Nicholas Vincent, Isaac Johnson, Patrick Sheehan, and Brent Hecht",
-    "Source": "Urman et al."
+    "Title": "Measuring the Importance of User-Generated Content to Search Engines",
+    "Authors": "Vincent et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2018",
@@ -2180,14 +2180,14 @@
     "Behavior": "Misjudgement",
     "Specific Behavior": "Group misrepresentation",
     "Method": "Crowdsourcing",
-    "Domain": "Ad delivery",
+    "Domain": "Advertising",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1145/3267323.3268962",
-    "Title": "The Accuracy of the Demographic Inferences Shown on Google’s Ad Settings",
-    "Authors": "Michael Carl Tschantz, Serge Egelman, Jaeyoung Choi, Nicholas Weaver, and Gerald Friedland",
-    "Source": "Urman et al."
+    "Title": "The Accuracy of the Demographic Inferences Shown on Google's Ad Settings",
+    "Authors": "Tschantz et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2018",
@@ -2200,9 +2200,9 @@
     "Country Studied": "Belgium",
     "Country of Researchers": "Belgium",
     "DOI": "https://doi.org/10.1016/j.tele.2018.07.004",
-    "Title": "Challenging Google Search filter bubbles in social and political information: Disconforming evidence from a digital methods case study. Telematics and Informatics 35, 7 (Oct. 2018),",
-    "Authors": "Cédric Courtois, Laura Slechten, and Lennert Coenen",
-    "Source": "Urman et al."
+    "Title": "Challenging Google Search filter bubbles in social and political information: Disconforming evidence from a digital methods case study",
+    "Authors": "Courtois, Slechten, and Coenen",
+    "Source": "2021 Review"
   },
   {
     "Year": "2018",
@@ -2216,8 +2216,8 @@
     "Country of Researchers": "Denmark",
     "DOI": "https://doi.org/10.1080/21670811.2018.1510741",
     "Title": "Are We Exposed to the Same “News” in the News Feed?: An empirical analysis of filter bubbles as information similarity for Danish Facebook users",
-    "Authors": "Anja Bechmann and Kristoffer L. Nielbo",
-    "Source": "Urman et al."
+    "Authors": "Bechmann and Nielbo",
+    "Source": "2021 Review"
   },
   {
     "Year": "2018",
@@ -2239,15 +2239,15 @@
     "Organization": "YouTube",
     "Behavior": "Distortion",
     "Specific Behavior": "Information quality",
-    "Method": "Non-persona scrape",
+    "Method": "Direct scrape",
     "Domain": "Search",
     "Language": "English",
     "Country Studied": "Mixed",
     "Country of Researchers": "Netherlands, Australia, Spain",
     "DOI": "https://doi.org/10.1177/1354856517736982",
-    "Title": "From ranking algorithms to ‘ranking cultures’: Investigating the modulation of visibility in YouTube search results. Convergence: The International Journal of Research into New Media Technologies 24, 1 (Feb. 2018),",
-    "Authors": "Bernhard Rieder, Ariadna Matamoros-Fernández, and Òscar Coromina",
-    "Source": "Urman et al."
+    "Title": "From ranking algorithms to ‘ranking cultures’: Investigating the modulation of visibility in YouTube search results",
+    "Authors": "Rieder, Matamoros-Fernández, and Coromina",
+    "Source": "2021 Review"
   },
   {
     "Year": "2018",
@@ -2260,9 +2260,9 @@
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1145/3274417",
-    "Title": "Auditing Partisan Audience Bias within Google Search. Proceedings of the ACM on Human-Computer Interaction 2, CSCW (Nov. 2018),",
-    "Authors": "Ronald E. Robertson, Shan Jiang, Kenneth Joseph, Lisa Friedland, David Lazer, and Christo Wilson",
-    "Source": "Urman et al."
+    "Title": "Auditing partisan audience bias within Google search",
+    "Authors": "Robertson et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2018",
@@ -2284,75 +2284,75 @@
     "Organization": "New York Times",
     "Behavior": "Distortion",
     "Specific Behavior": "News distribution, personalization",
-    "Method": "Persona scrape",
+    "Method": "Sock puppets",
     "Domain": "Recommendation",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "India",
     "DOI": "https://doi.org/10.1109/ASONAM.2018.8508812",
-    "Title": "Analyzing the News Coverage of Personalized Newspapers",
-    "Authors": "Abhijnan Chakraborty and Niloy Ganguly",
-    "Source": "Urman et al."
+    "Title": "Analyzing the news coverage of personalized newspapers",
+    "Authors": "Chakraborty and Ganguly",
+    "Source": "2021 Review"
   },
   {
     "Year": "2018",
-    "Organization": "Booking, Hotels, Avis, Hrs, Orbitz",
+    "Organization": "Booking.com\nHotels.com\nOther websites",
     "Behavior": "Discrimination",
     "Specific Behavior": "Price discrimination",
-    "Method": "Persona scrape",
-    "Domain": "E-commerce",
+    "Method": "Sock puppets",
+    "Domain": "Pricing",
     "Language": "Mixed",
     "Country Studied": "France, Georgia, Germany, Pakistan, Russia, US",
     "Country of Researchers": "Netherlands, Germany",
     "DOI": "https://doi.org/10.1145/3176258.3176338",
     "Title": "An Empirical Study on Online Price Differentiation",
-    "Authors": "Thomas Hupperich, Dennis Tatang, Nicolai Wilkop, and Thorsten Holz",
-    "Source": "Urman et al."
+    "Authors": "Hupperich et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2018",
-    "Organization": "Indeed, Monster, CareerBuilder",
+    "Organization": "Indeed\nMonster\nCareerBuilder",
     "Behavior": "Discrimination",
     "Specific Behavior": "Discrimination",
-    "Method": "Persona scrape",
+    "Method": "Direct scrape",
     "Domain": "Search",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1145/3173574.3174225",
-    "Title": "Investigating the Impact of Gender on Rank in Resume Search Engines",
-    "Authors": "Le Chen, Ruijun Ma, Anikó Hannák, and Christo Wilson",
-    "Source": "Urman et al."
+    "Title": "Investigating the impact of gender on rank in resume search engines",
+    "Authors": "Chen et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2018",
     "Organization": "Facebook",
     "Behavior": "Exploitation",
     "Specific Behavior": "Group misrepresentation",
-    "Method": "Repurposing",
-    "Domain": "Ad delivery",
+    "Method": "Crowdsourcing",
+    "Domain": "Advertising",
     "Language": "Mixed",
     "Country Studied": "EU",
     "Country of Researchers": "Spain",
     "DOI": "https://doi.org/10.5555/3277203.3277240",
     "Title": "Unveiling and Quantifying Facebook Exploitation of Sensitive Personal Data for Advertising Purposes",
-    "Authors": "José González Cabañas, Ángel Cuevas, and Rubén Cuevas",
-    "Source": "Urman et al."
+    "Authors": "Cabanas, Cuevas, and Cuevas",
+    "Source": "2021 Review"
   },
   {
     "Year": "2017",
     "Organization": "Spotify",
-    "Behavior": "Distortion",
+    "Behavior": "Discrimination",
     "Specific Behavior": "Personalization",
-    "Method": "Persona scrape",
+    "Method": "Sock puppets",
     "Domain": "Recommendation",
     "Language": "Mixed",
     "Country Studied": "Mixed",
     "Country of Researchers": "Sweden",
     "DOI": "https://doi.org/10.3384/cu.2000.1525.1792163",
-    "Title": "Tracking Gendered Streams",
-    "Authors": "Maria C. Eriksson and Anna Johansson",
-    "Source": "Urman et al."
+    "Title": "Tracking gendered streams",
+    "Authors": "Eriksson and Johansson",
+    "Source": "2021 Review"
   },
   {
     "Year": "2017",
@@ -2371,78 +2371,78 @@
   },
   {
     "Year": "2017",
-    "Organization": "Booking",
+    "Organization": "Booking.com",
     "Behavior": "Distortion",
     "Specific Behavior": "Information quality",
-    "Method": "Non-persona scrape",
-    "Domain": "E-commerce",
+    "Method": "Direct scrape",
+    "Domain": "Search",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1609/icwsm.v11i1.14898",
-    "Title": "“Be Careful; Things Can Be Worse than They Appear”: Understanding Biased Algorithms and Users’ Behavior Around Them in Rating Platforms. Proceedings of the International AAAI Conference on Web and Social Media 11, 1 (May 2017), 62–71. Number: 1.Crossref",
-    "Authors": "Motahhare Eslami, Kristen Vaccaro, Karrie Karahalios, and Kevin Hamilton",
-    "Source": "Urman et al."
+    "Title": "\"Be careful; Things can be worse than they appear\" - Understanding biased algorithms and users' behavior around them in rating platforms",
+    "Authors": "Eslami et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2017",
-    "Organization": "Twitter, Google",
+    "Organization": "Twitter\nGoogle",
     "Behavior": "Distortion",
     "Specific Behavior": "Information quality",
-    "Method": "Non-persona scrape",
+    "Method": "Direct scrape",
     "Domain": "Search",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US, Germany",
     "DOI": "https://doi.org/10.1145/2998181.2998321",
-    "Title": "Quantifying Search Bias: Investigating Sources of Bias for Political Searches in Social Media",
-    "Authors": "Juhi Kulshrestha, Motahhare Eslami, Johnnatan Messias, Muhammad Bilal Zafar, Saptarshi Ghosh, Krishna P. Gummadi, and Karrie Karahalios",
-    "Source": "Urman et al."
+    "Title": "Quantifying search bias: Investigating sources of bias for political searches in social media",
+    "Authors": "Kulshrestha et al.",
+    "Source": "2021 Review"
   },
   {
-    "Year": "2017",
-    "Organization": "News apps (wide range)",
+    "Year": "2018",
+    "Organization": "Not specified",
     "Behavior": "Distortion",
     "Specific Behavior": "News distribution",
-    "Method": "Code audit",
+    "Method": "Code",
     "Domain": "Recommendation",
     "Language": "Mixed",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1080/21670811.2017.1366865",
     "Title": "Coding the News: The role of computer code in filtering and distributing news",
-    "Authors": "Matthew S. Weber and Allie Kosterich",
-    "Source": "Urman et al."
+    "Authors": "Weber and Kosterich",
+    "Source": "2021 Review"
   },
   {
     "Year": "2017",
-    "Organization": "TaskRabbit, Fiverr",
+    "Organization": "TaskRabbit\nFiverr",
     "Behavior": "Discrimination",
     "Specific Behavior": "Discrimination",
-    "Method": "Non-persona scrape",
+    "Method": "Direct scrape",
     "Domain": "Search",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1145/2998181.2998327",
-    "Title": "Bias in Online Freelance Marketplaces: Evidence from TaskRabbit and Fiverr",
-    "Authors": "Anikó Hannák, Claudia Wagner, David Garcia, Alan Mislove, Markus Strohmaier, and Christo Wilson",
-    "Source": "Urman et al."
+    "Title": "Bias in Online freelance marketplaces: Evidence from TaskRabbit and Fiverr",
+    "Authors": "Hannak et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2017",
     "Organization": "Spotify",
     "Behavior": "Exploitation",
     "Specific Behavior": "Group misrepresentation",
-    "Method": "Non-persona scrape",
-    "Domain": "Ad delivery",
+    "Method": "Direct scrape",
+    "Domain": "Advertising",
     "Language": "Mixed",
     "Country Studied": "Mixed",
     "Country of Researchers": "Sweden",
     "DOI": "https://doi.org/10.3384/cu.2000.1525.1792212",
-    "Title": "Studying Ad Targeting with Digital Methods: The Case of Spotify",
-    "Authors": "Roger Mähler and Patrick Vonderau",
-    "Source": "Urman et al."
+    "Title": "Studying ad targeting with digital methods: The case of spotify",
+    "Authors": "Mahler and Vonderau",
+    "Source": "2021 Review"
   },
   {
     "Year": "2017",
@@ -2455,24 +2455,24 @@
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1609/icwsm.v11i1.14883",
-    "Title": "The Substantial Interdependence of Wikipedia and Google: A Case Study on the Relationship Between Peer Production Communities and Information Technologies. Proceedings of the International AAAI Conference on Web and Social Media 11, 1 (May 2017),",
-    "Authors": "Connor McMahon, Isaac Johnson, and Brent Hecht",
-    "Source": "Urman et al."
+    "Title": "The Substantial Interdependence of Wikipedia and Google: A Case Study on the Relationship Between Peer Production Communities and Information Technologies",
+    "Authors": "McMahon, Johnson, and Hecht",
+    "Source": "2021 Review"
   },
   {
     "Year": "2016",
-    "Organization": "Google, Bing",
+    "Organization": "Google",
     "Behavior": "Distortion",
     "Specific Behavior": "Personalization",
-    "Method": "Persona scrape",
-    "Domain": "Search",
+    "Method": "Sock puppets",
+    "Domain": "Mapping",
     "Language": "NA",
     "Country Studied": "Morocco, Argentina, China, India, Russia, Ukraine",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1145/2872427.2883016",
-    "Title": "MapWatch: Detecting and Monitoring International Border Personalization on Online Maps",
-    "Authors": "Gary Soeller, Karrie Karahalios, Christian Sandvig, and Christo Wilson",
-    "Source": "Urman et al."
+    "Title": "MapWatch: Detecting and monitoring international border personalization on online maps",
+    "Authors": "Soeller et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2016",
@@ -2494,30 +2494,30 @@
     "Organization": "Amazon",
     "Behavior": "Discrimination",
     "Specific Behavior": "Price discrimination",
-    "Method": "Non-persona scrape",
-    "Domain": "E-commerce",
+    "Method": "Direct scrape",
+    "Domain": "Pricing",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1145/2872427.2883089",
     "Title": "An Empirical Analysis of Algorithmic Pricing on Amazon Marketplace",
-    "Authors": "Le Chen, Alan Mislove, and Christo Wilson",
-    "Source": "Urman et al."
+    "Authors": "Chen et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2015",
     "Organization": "Google",
     "Behavior": "Distortion",
     "Specific Behavior": "Personalization",
-    "Method": "Persona scrape",
+    "Method": "Sock puppets",
     "Domain": "Search",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1145/2815675.2815714",
     "Title": "Location, Location, Location: The Impact of Geolocation on Web Search Personalization",
-    "Authors": "Chloe Kliman-Silver, Aniko Hannak, David Lazer, Christo Wilson, and Alan Mislove",
-    "Source": "Urman et al."
+    "Authors": "Kliman-Silver et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2015",
@@ -2539,60 +2539,60 @@
     "Organization": "Google",
     "Behavior": "Discrimination",
     "Specific Behavior": "Group misrepresentation",
-    "Method": "Non-persona scrape",
+    "Method": "Direct scrape",
     "Domain": "Search",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1145/2702123.2702520",
     "Title": "Unequal Representation and Gender Stereotypes in Image Search Results for Occupations",
-    "Authors": "Matthew Kay, Cynthia Matuszek, and Sean A. Munson",
-    "Source": "Urman et al."
+    "Authors": "Kay et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2014",
-    "Organization": "E-commerce (wide range)",
+    "Organization": "WalMart\nExpedia\nOrbitz",
     "Behavior": "Discrimination",
     "Specific Behavior": "Price discrimination",
-    "Method": "Persona scrape, Crowdsourcing",
-    "Domain": "E-commerce",
+    "Method": "Crowdsourcing\nSock puppets",
+    "Domain": "Pricing",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1145/2663716.2663744",
     "Title": "Measuring Price Discrimination and Steering on E-commerce Web Sites",
-    "Authors": "Aniko Hannak, Gary Soeller, David Lazer, Alan Mislove, and Christo Wilson",
-    "Source": "Urman et al."
+    "Authors": "Hannak et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2013",
     "Organization": "Google",
     "Behavior": "Distortion",
     "Specific Behavior": "Personalization",
-    "Method": "Persona scrape, Crowdsourcing",
+    "Method": "Crowdsourcing\nSock puppets",
     "Domain": "Search",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://doi.org/10.1145/2488388.2488435",
-    "Title": "Measuring personalization of web search",
-    "Authors": "Aniko Hannak, Piotr Sapiezynski, Arash Molavi Kakhki, Balachander Krishnamurthy, David Lazer, Alan Mislove, and Christo Wilson",
-    "Source": "Urman et al."
+    "Title": "Measuring Personalization of Web Search",
+    "Authors": "Hannak et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2013",
-    "Organization": "E-commerce (wide range)",
+    "Organization": "Amazon\nHotels.com\nOther websites",
     "Behavior": "Discrimination",
     "Specific Behavior": "Price discrimination",
     "Method": "Crowdsourcing",
-    "Domain": "E-commerce",
+    "Domain": "Pricing",
     "Language": "Mixed",
     "Country Studied": "Mixed",
     "Country of Researchers": "Spain",
     "DOI": "https://doi.org/10.1145/2535372.2535415",
-    "Title": "Crowd-assisted search for price discrimination in e-commerce: first results",
-    "Authors": "Jakub Mikians, László Gyarmati, Vijay Erramilli, and Nikolaos Laoutaris",
-    "Source": "Urman et al."
+    "Title": "Crowd-assisted search for price discrimination in E-commerce: First results",
+    "Authors": "Mikians et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2013",
@@ -2614,30 +2614,30 @@
     "Organization": "Google",
     "Behavior": "Discrimination",
     "Specific Behavior": "Group misrepresentation",
-    "Method": "Non-persona scrape",
+    "Method": "Direct scrape",
     "Domain": "Search",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "US",
     "DOI": "https://www.proquest.com/docview/1771536966",
-    "Title": "Google Search: Hyper-visibility as a Means of Rendering Black Women and Girls Invisible",
-    "Authors": "Safiya Noble",
-    "Source": "Urman et al."
+    "Title": "Google search: Hyper-visibility as a means of rendering black women and girls invisible",
+    "Authors": "Noble",
+    "Source": "2021 Review"
   },
   {
     "Year": "2012",
-    "Organization": "Google, Bing, Amazon, E-commerce (wide range)",
+    "Organization": "Google\nBing",
     "Behavior": "Discrimination",
     "Specific Behavior": "Price discrimination",
-    "Method": "Persona scrape",
-    "Domain": "E-commerce",
+    "Method": "Sock puppets",
+    "Domain": "Pricing",
     "Language": "Mixed",
     "Country Studied": "Greece, Hungary, Italy, Germany, US, Austria, UK, Poland, Spain",
     "Country of Researchers": "US, Spain",
     "DOI": "https://doi.org/10.1145/2390231.2390245",
     "Title": "Detecting price and search discrimination on the internet",
-    "Authors": "Jakub Mikians, László Gyarmati, Vijay Erramilli, and Nikolaos Laoutaris",
-    "Source": "Urman et al."
+    "Authors": "Mikians et al.",
+    "Source": "2021 Review"
   },
   {
     "Year": "2013",
@@ -2652,7 +2652,7 @@
     "DOI": "https://doi.org/10.1145/2460276.2460278",
     "Title": "Discrimination in Online Ad Delivery",
     "Authors": "Sweeney",
-    "Source": "NEEDS REVIEW (pre-screened with Gemma)"
+    "Source": "2021 Review"
   },
   {
     "Year": "2018",
@@ -2667,7 +2667,7 @@
     "DOI": "http://proceedings.mlr.press/v81/buolamwini18a.html",
     "Title": "Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification",
     "Authors": "Buolamwini and Gebru",
-    "Source": "NEEDS REVIEW (pre-screened with Gemma)"
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
@@ -2682,7 +2682,7 @@
     "DOI": "https://doi.org/10.1145/3306618.3314244",
     "Title": "Actionable auditing: Investigating the impact of publicly naming biased performance results of commercial AI products",
     "Authors": "Raji and Buolamwini",
-    "Source": "NEEDS REVIEW (pre-screened with Gemma)"
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
@@ -2697,7 +2697,7 @@
     "DOI": "https://arxiv.org/abs/1906.02659",
     "Title": "Does Object Recognition Work for Everyone?",
     "Authors": "DeVries et al.",
-    "Source": "NEEDS REVIEW (pre-screened with Gemma)"
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
@@ -2712,7 +2712,7 @@
     "DOI": "https://ojs.aaai.org/index.php/ICWSM/article/view/3232",
     "Title": "Fairness in proprietary image tagging algorithms: A cross-platform audit on people images",
     "Authors": "Kyriakou et al.",
-    "Source": "NEEDS REVIEW (pre-screened with Gemma)"
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
@@ -2727,7 +2727,7 @@
     "DOI": "https://ojs.aaai.org/index.php/ICWSM/article/view/3255",
     "Title": "Social B(eye)as: Human and machine descriptions of people images",
     "Authors": "Barlas et al.",
-    "Source": "NEEDS REVIEW (pre-screened with Gemma)"
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
@@ -2742,7 +2742,7 @@
     "DOI": "https://doi.org/10.1145/3322640.3326705",
     "Title": "Why machine learning may lead to unfairness: Evidence from risk assessment for juvenile justice in Catalonia",
     "Authors": "Tolan et al.",
-    "Source": "NEEDS REVIEW (pre-screened with Gemma)"
+    "Source": "2021 Review"
   },
   {
     "Year": "2020",
@@ -2757,7 +2757,7 @@
     "DOI": "https://ojs.aaai.org/index.php/ICWSM/article/view/7276",
     "Title": "Auditing Race and Gender Discrimination in Online Housing Market",
     "Authors": "Asplund et al.",
-    "Source": "NEEDS REVIEW (pre-screened with Gemma)"
+    "Source": "2021 Review"
   },
   {
     "Year": "2020",
@@ -2772,7 +2772,7 @@
     "DOI": "https://doi.org/10.18653/v1/P19-1163",
     "Title": "The Risk of Racial Bias in Hate Speech Detection",
     "Authors": "Sap et al.",
-    "Source": "NEEDS REVIEW (pre-screened with Gemma)"
+    "Source": "2021 Review"
   },
   {
     "Year": "2018",
@@ -2787,7 +2787,7 @@
     "DOI": "https://doi.org/10.14722/ndss.2018.23204",
     "Title": "Investigating Ad Transparency Mechanisms in Social Media: A Case Study of Facebook's Explanations",
     "Authors": "Andreou et al.",
-    "Source": "NEEDS REVIEW (pre-screened with Gemma)"
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
@@ -2802,7 +2802,7 @@
     "DOI": "https://ojs.aaai.org/index.php/ICWSM/article/view/3229",
     "Title": "Bias misperceived: The role of partisanship and misinformation in YouTube comment moderation",
     "Authors": "Jiang, Robertson, and Wilson",
-    "Source": "NEEDS REVIEW (pre-screened with Gemma)"
+    "Source": "2021 Review"
   },
   {
     "Year": "2015",
@@ -2817,7 +2817,7 @@
     "DOI": "https://doi.org/10.1515/popets-2015-0007",
     "Title": "Automated Experiments on Ad Privacy Settings",
     "Authors": "Datta et al.",
-    "Source": "NEEDS REVIEW (pre-screened with Gemma)"
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
@@ -2832,7 +2832,7 @@
     "DOI": "https://ojs.aaai.org/index.php/ICWSM/article/view/3248",
     "Title": "Measuring the Importance of User-Generated Content to Search Engines",
     "Authors": "Vincent et al.",
-    "Source": "NEEDS REVIEW (pre-screened with Gemma)"
+    "Source": "2021 Review"
   },
   {
     "Year": "2017",
@@ -2847,7 +2847,7 @@
     "DOI": "https://doi.org/10.1177/0887403415604899",
     "Title": "Out With the Old and in With the New? An Empirical Comparison of Supervised Learning Algorithms to Predict Recidivism",
     "Authors": "Duwe and Kim",
-    "Source": "NEEDS REVIEW (pre-screened with Gemma)"
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
@@ -2862,7 +2862,7 @@
     "DOI": "https://doi.org/10.1177/0887403417718608",
     "Title": "Better Practices in the Development and Validation of Recidivism Risk Assessments: The Minnesota Sex Offender Screening Tool–4",
     "Authors": "Duwe",
-    "Source": "NEEDS REVIEW (pre-screened with Gemma)"
+    "Source": "2021 Review"
   },
   {
     "Year": "2019",
@@ -2877,22 +2877,22 @@
     "DOI": "https://doi.org/10.1145/3306618.3314279",
     "Title": "The right to confront your accusers: Opening the black box of forensic DNA software",
     "Authors": "Matthews et al.",
-    "Source": "NEEDS REVIEW (pre-screened with Gemma)"
+    "Source": "2021 Review"
   },
   {
     "Year": "2026",
     "Organization": "Google",
     "Behavior": "Misjudgement",
-    "Specific Behavior": "Discrimination (other), User profiling",
+    "Specific Behavior": "Discrimination",
     "Method": "Direct scrape",
     "Domain": "Healthcare",
     "Language": "English",
-    "Country Studied": "US, UK",
+    "Country Studied": "Austria",
     "Country of Researchers": "India, UK",
     "DOI": "https://doi.org/10.1007/s13755-025-00412-z",
     "Title": "Conformal uncertainty quantification to evaluate predictive fairness of foundation AI model for skin lesion classes across patient demographics",
     "Authors": "Bhattacharyya et al.",
-    "Source": "NEEDS REVIEW (pre-screened with Gemma)"
+    "Source": "2026 Review"
   },
   {
     "Year": "2026",
@@ -2907,7 +2907,7 @@
     "DOI": "https://doi.org/10.1016/j.ajoint.2026.100233",
     "Title": "Evaluation of algorithmic bias in large language models for retinal clinical recommendations",
     "Authors": "Gandhi et al.",
-    "Source": "NEEDS REVIEW (pre-screened with Gemma)"
+    "Source": "2026 Review"
   },
   {
     "Year": "2026",
@@ -2922,11 +2922,11 @@
     "DOI": "https://doi.org/10.1111/jedm.12420",
     "Title": "Algorithmic Bias in BERT for Response Accuracy Prediction: A Case Study for Investigating Population Validity",
     "Authors": "Gorgun and Yildirim-Erbasli",
-    "Source": "NEEDS REVIEW (pre-screened with Gemma)"
+    "Source": "2026 Review"
   },
   {
     "Year": "2026",
-    "Organization": "Organization not explicitly mentioned in the abstract.",
+    "Organization": "N/A or not specified",
     "Behavior": "Discrimination",
     "Specific Behavior": "Discrimination (other), User categorization, User profiling",
     "Method": "Code",
@@ -2937,22 +2937,22 @@
     "DOI": "https://doi.org/10.1093/jamiaopen/ooaf171",
     "Title": "Evaluation and improvement of algorithmic fairness for COVID-19 severity classification using Explainable Artificial Intelligence-based bias mitigation",
     "Authors": "Nejadshamsi et al.",
-    "Source": "NEEDS REVIEW (pre-screened with Gemma)"
+    "Source": "2026 Review"
   },
   {
     "Year": "2026",
-    "Organization": " ",
+    "Organization": "OpenRent, GoodLord, and Reapit",
     "Behavior": "Discrimination",
     "Specific Behavior": "Discrimination (other), User categorization, User profiling",
-    "Method": "Direct scrape, Sock puppets, Carrier puppet",
-    "Domain": "Hiring",
+    "Method": "Interview",
+    "Domain": "Housing",
     "Language": "English",
-    "Country Studied": "GBR",
-    "Country of Researchers": "GBR",
+    "Country Studied": "England",
+    "Country of Researchers": "England",
     "DOI": "https://doi.org/10.1080/02673037.2025.2453005",
     "Title": "Algorithmic tenancies and the ordinal tenant: digital risk-profiling in England’s private rented sector",
     "Authors": "Wallace et al.",
-    "Source": "NEEDS REVIEW (pre-screened with Gemma)"
+    "Source": "2026 Review"
   },
   {
     "Year": "2026",
