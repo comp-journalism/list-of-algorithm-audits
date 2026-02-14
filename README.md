@@ -1,9 +1,46 @@
 # List of Algorithm Audits
 A continually-updated list of studies from the CSCW 2021 paper, "[Problematic Machine Behavior: A Systematic Literature Review of Algorithm Audits](https://arxiv.org/abs/2102.04256)"
 
-Repository is a work-in-progress, open to the community for edits.
+Repository is a work-in-progress, open to community for edits.
 
-To add a study, simply create an issue or pull request.
+Major update in February 2026 to add web interface.
+
+
+## Add a Study
+
+To contribute a study, just add an entry in `audit-data.js` with the template:
+
+```json
+{
+  "Year": "2024",
+  "Organization": "Google",
+  "Behavior": "Discrimination",
+  "Specific Behavior": "",
+  "Method": "Direct scrape",
+  "Domain": "Search",
+  "Language": "English",
+  "Country Studied": "US",
+  "Country of Researchers": "US",
+  "DOI": "https://doi.org/...",
+  "Title": "Title of the study",
+  "Authors": "Last et al.",
+  "Source": "2026 Review (Your name)"
+}
+```
+
+**Guide:**
+- **Year**: Publication year
+- **Organization**: Platform or system audited (e.g., Google, Facebook, Amazon)
+- **Behavior**: One of `Discrimination`, `Distortion`, `Exploitation`, or `Misjudgement`
+- **Specific Behavior**: Optional subcategory (e.g., Personalization, News distribution)
+- **Method**: One of `Direct scrape`, `Sock puppets`, `Crowdsourcing`, `Carrier puppet`, `Persona scrape`, or `Code`
+- **Domain**: e.g., Search, Recommendation, Advertising, Vision, Language Processing, Pricing, Criminal Justice
+- **Language**: Language of the content studied
+- **Country Studied** / **Country of Researchers**: Use ISO-style short names (e.g., US, UK, Germany)
+- **DOI**: Full URL to the paper (DOI link preferred)
+- **Title**: Paper title
+- **Authors**: Abbreviated (e.g., "Smith et al." or "Smith and Jones")
+- **Source**: The name of the human reviewer
 
 ## Definitions
 
@@ -16,6 +53,8 @@ To add a study, simply create an issue or pull request.
 
 
 ## Studies
+
+Legacy section. Please use the [web interface](https://comp-journalism.github.io/list-of-algorithm-audits/) for a more up-to-date and explorable list.
 
 ### Discrimination
 The algorithm disparately treats or disparately impacts people on the basis of their race, age, gender, location, socioeconomic status, and/or intersectional identity. For example, an algorithm implicated in discrimination may systematically favor people who identify as males, or reinforce harmful stereotypes about elderly people.

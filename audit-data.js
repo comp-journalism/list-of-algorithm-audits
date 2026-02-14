@@ -8326,21 +8326,6 @@ const DATA = [
   },
   {
     "Year": "2022",
-    "Organization": "Facebook, Twitter, TikTok, Google, Apple",
-    "Behavior": "Distortion",
-    "Specific Behavior": "Harmful content, Information quality, News distribution, Personalization, User profiling",
-    "Method": "Direct scrape",
-    "Domain": "Social Media",
-    "Language": "English",
-    "Country Studied": "US",
-    "Country of Researchers": "US",
-    "DOI": "https://doi.org/10.1145/3514094.3539538",
-    "Title": "Inspecting Algorithmic Flows: Ethics, Transparency, and Accountability for Digital Mass Communication Platforms",
-    "Authors": "Bandy",
-    "Source": "NEEDS HUMAN REVIEW"
-  },
-  {
-    "Year": "2022",
     "Organization": "",
     "Behavior": "Discrimination",
     "Specific Behavior": "Discrimination (other), User categorization, User profiling",
@@ -11221,32 +11206,32 @@ const DATA = [
   },
   {
     "Year": "2023",
-    "Organization": "",
+    "Organization": "Facebook",
     "Behavior": "Distortion",
     "Specific Behavior": "Filter bubble, Information quality, News distribution, Personalization, User categorization, User profiling",
-    "Method": "Survey",
+    "Method": "Direct Scrape, Survey, Experiment",
     "Domain": "Social Media",
     "Language": "English",
     "Country Studied": "US",
     "Country of Researchers": "",
     "DOI": "https://doi.org/10.1126/science.abp9364",
     "Title": "How do social media feed algorithms affect attitudes and behavior in an election campaign?",
-    "Authors": "Guess, Andrew M.; Malhotra, Neil; Pan, Jennifer; Barberá, Pablo; Allcott, Hunt; Brown, Taylor; Crespo-Tenorio, Adriana; Dimmery, Drew; Freelon, Deen; Gentzkow, Matthew; González-Bailón, Sandra; Kennedy, Edward; Kim, Young Mie; Lazer, David; Moehler, Devra; Nyhan, Brendan; Rivera, Carlos Velasco; Settle, Jaime; Thomas, Daniel Robert; Thorson, Emily; Tromble, Rebekah; Wilkins, Arjun; Wojcieszak, Magdalena; Xiong, Beixian; de Jonge, Chad Kiewiet; Franco, Annie; Mason, Winter; Stroud, Natalie Jomini; Tucker, Joshua A.",
-    "Source": "NEEDS HUMAN REVIEW"
+    "Authors": "Guesss et al.",
+    "Source": "2026 Review (Bandy)"
   },
   {
     "Year": "2025",
     "Organization": "Twitter",
     "Behavior": "Misjudgement",
     "Specific Behavior": "Personalization, User profiling",
-    "Method": "",
+    "Method": "Sock puppets",
     "Domain": "Recommendation",
     "Language": "English",
     "Country Studied": "",
     "Country of Researchers": "",
     "DOI": "https://doi.org/10.48550/arXiv.2509.09826",
     "Title": "The Role of Follow Networks and Twitter's Content Recommender on Partisan Skew and Rumor Exposure during the 2022 U.S. Midterm Election",
-    "Authors": "",
-    "Source": "NEEDS HUMAN REVIEW"
+    "Authors": "Duskin et al.",
+    "Source": "026 Review (Bandy)"
   }
 ];
