@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Algorithm Audit Explorer</title>
+<link rel="stylesheet" href="audit-explorer.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Algorithm Audit Explorer</h1>
+    <p>Browse and filter algorithm audit studies</p>
+  </div>
+</header>
+
+<div class="filters">
+  <div class="container filters-inner">
+    <button class="shuffle-btn" onclick="shuffleRows()">🔀 Shuffle</button>
+    <div class="filter-group" id="fg-year">
+      <label class="filter-label" onclick="toggleDropdown('year')">Year <span class="count" id="year-count"></span></label>
+      <div class="dropdown dropdown-year" id="dd-year">
+        <div class="year-chart" id="year-chart"></div>
+        <div class="year-range-track" id="year-range-track">
+          <div class="year-range-fill" id="year-range-fill"></div>
+          <div class="year-handle year-handle-min" id="year-handle-min"></div>
+          <div class="year-handle year-handle-max" id="year-handle-max"></div>
+        </div>
+        <div class="year-labels" id="year-labels"></div>
+        <div class="year-inputs">
+          <input type="number" id="yearMin" min="2012" max="2026" value="2012">
+          <span class="dash">&ndash;</span>
+          <input type="number" id="yearMax" min="2012" max="2026" value="2026">
+        </div>
+      </div>
+    </div>
+    <div class="filter-group" id="fg-method">
+      <label class="filter-label" onclick="toggleDropdown('method')">Method <span class="count" id="method-count"></span></label>
+      <div class="dropdown" id="dd-method"></div>
+    </div>
+    <div class="filter-group" id="fg-domain">
+      <label class="filter-label" onclick="toggleDropdown('domain')">Domain <span class="count" id="domain-count"></span></label>
+      <div class="dropdown" id="dd-domain"></div>
+    </div>
+    <div class="filter-group" id="fg-org">
+      <label class="filter-label" onclick="toggleDropdown('org')">Organization <span class="count" id="org-count"></span></label>
+      <div class="dropdown" id="dd-org"></div>
+    </div>
+    <div class="filter-group" id="fg-source">
+      <label class="filter-label" onclick="toggleDropdown('source')">Source <span class="count" id="source-count"></span></label>
+      <div class="dropdown" id="dd-source"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="results-bar">
+    <span class="count" id="results-count"></span>
+    <button class="clear-btn" onclick="clearFilters()">Clear all filters</button>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th onclick="sortBy('title')" id="th-title">Reference <span class="sort-arrow">&#9650;&#9660;</span></th>
+        <th onclick="sortBy('year')" id="th-year">Year <span class="sort-arrow">&#9650;&#9660;</span></th>
+        <th onclick="sortBy('method')" id="th-method">Method <span class="sort-arrow">&#9650;&#9660;</span></th>
+        <th onclick="sortBy('domain')" id="th-domain">Domain <span class="sort-arrow">&#9650;&#9660;</span></th>
+        <th onclick="sortBy('org')" id="th-org">Organization <span class="sort-arrow">&#9650;&#9660;</span></th>
+        <th onclick="sortBy('source')" id="th-source">Source <span class="sort-arrow">&#9650;&#9660;</span></th>
+      </tr>
+    </thead>
+    <tbody id="tbody"><tr><td colspan="6" style="text-align:center;padding:48px;color:#999">Loading data...</td></tr></tbody>
+  </table>
+  <div class="no-results" id="no-results" style="display:none">No audits match your filters.</div>
+</div>
+
+<footer class="footnotes">
+  <a href="https://doi.org/10.1145/3715275.3732026">Using data from Urman et al.</a>
+  <a href="https://jackbandy.com/text/llm-code-philosophy.html">This tool made with help from LLMs</a>
+</footer>
+
+<script src="audit-data.js"></script>
+<script src="audit-explorer.js"></script>
+</body>
+</html>
