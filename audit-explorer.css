@@ -121,7 +121,44 @@ td a:hover { text-decoration: underline; }
 }
 .footnotes a:hover { text-decoration: underline; }
 
+.filters-toggle {
+  display: none;
+  font-size: 13px; font-weight: 500; font-family: inherit;
+  padding: 8px 14px; border: 1px solid #ccc; border-radius: 8px;
+  background: #fff; cursor: pointer; transition: border-color 0.15s;
+  width: 100%;
+}
+.filters-toggle:hover { border-color: #888; }
+.filters-toggle.active { border-color: #1a1a2e; background: #f0f0ff; }
+
 @media (max-width: 768px) {
-  .filters-inner { flex-direction: column; gap: 12px; }
-  thead th, tbody td { padding: 8px 10px; font-size: 12px; }
+  .filters-toggle { display: block; }
+  .filters-inner { display: none; flex-direction: column; gap: 12px; padding-top: 12px; }
+  .filters-inner.open { display: flex; }
+
+  /* Card layout for table */
+  thead { display: none; }
+  tbody tr {
+    display: block;
+    padding: 12px 14px;
+    border-bottom: 1px solid #eee;
+  }
+  tbody td {
+    display: block;
+    padding: 2px 0;
+    font-size: 13px;
+    text-align: left;
+  }
+  tbody td:before {
+    content: attr(data-label);
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #999;
+    margin-top: 6px;
+  }
+  tbody td:first-child:before { margin-top: 0; }
+  table { border-radius: 10px; overflow: hidden; }
 }

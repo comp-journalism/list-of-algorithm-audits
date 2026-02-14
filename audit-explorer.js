@@ -100,6 +100,13 @@ function buildCheckboxes(containerId, itemsWithCounts, filterSet, filterKey) {
   }
 }
 
+function toggleMobileFilters() {
+  const inner = document.querySelector(".filters-inner");
+  const btn = document.querySelector(".filters-toggle");
+  inner.classList.toggle("open");
+  btn.classList.toggle("active");
+}
+
 function toggleDropdown(name) {
   const dd = document.getElementById("dd-" + name);
   const wasOpen = dd.classList.contains("open");
@@ -352,7 +359,7 @@ function render() {
       const domains = (r.Domain || "").split(",").map(d => `<span class="tag tag-domain">${d.trim()}</span>`).join("");
       const orgs = (r.Organization || "").split(",").map(o => orgTagHtml(o)).join("");
       const source = sourceTagHtml(r.Source);
-      return `<tr><td>${link}</td><td>${r.Year}</td><td>${methods}</td><td>${domains}</td><td>${orgs}</td><td>${source}</td></tr>`;
+      return `<tr><td data-label="Reference">${link}</td><td data-label="Year">${r.Year}</td><td data-label="Method">${methods}</td><td data-label="Domain">${domains}</td><td data-label="Organization">${orgs}</td><td data-label="Source">${source}</td></tr>`;
     }).join("");
   }
 
