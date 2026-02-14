@@ -2,3 +2,5 @@
 *.tmp
 __pycache__/
 *.pyc
+*.log
+prompts.txt
