@@ -2877,7 +2877,7 @@ const DATA = [
     "DOI": "https://doi.org/10.1007/s13755-025-00412-z",
     "Title": "Conformal uncertainty quantification to evaluate predictive fairness of foundation AI model for skin lesion classes across patient demographics",
     "Authors": "Bhattacharyya et al.",
-    "Source": "2026 Review (Bandy)"
+    "Source": "2026 Refresh (Bandy)"
   },
   {
     "Year": "2026",
@@ -2892,7 +2892,7 @@ const DATA = [
     "DOI": "https://doi.org/10.1016/j.ajoint.2026.100233",
     "Title": "Evaluation of algorithmic bias in large language models for retinal clinical recommendations",
     "Authors": "Gandhi et al.",
-    "Source": "2026 Review (Bandy)"
+    "Source": "2026 Refresh (Bandy)"
   },
   {
     "Year": "2026",
@@ -2907,7 +2907,7 @@ const DATA = [
     "DOI": "https://doi.org/10.1111/jedm.12420",
     "Title": "Algorithmic Bias in BERT for Response Accuracy Prediction: A Case Study for Investigating Population Validity",
     "Authors": "Gorgun and Yildirim-Erbasli",
-    "Source": "2026 Review (Bandy)"
+    "Source": "2026 Refresh (Bandy)"
   },
   {
     "Year": "2026",
@@ -2922,7 +2922,7 @@ const DATA = [
     "DOI": "https://doi.org/10.1093/jamiaopen/ooaf171",
     "Title": "Evaluation and improvement of algorithmic fairness for COVID-19 severity classification using Explainable Artificial Intelligence-based bias mitigation",
     "Authors": "Nejadshamsi et al.",
-    "Source": "2026 Review (Bandy)"
+    "Source": "2026 Refresh (Bandy)"
   },
   {
     "Year": "2026",
@@ -2937,7 +2937,7 @@ const DATA = [
     "DOI": "https://doi.org/10.1080/02673037.2025.2453005",
     "Title": "Algorithmic tenancies and the ordinal tenant: digital risk-profiling in England’s private rented sector",
     "Authors": "Wallace et al.",
-    "Source": "2026 Review (Bandy)"
+    "Source": "2026 Refresh (Bandy)"
   },
   {
     "Year": "2026",
@@ -2956,7 +2956,7 @@ const DATA = [
   },
   {
     "Year": "2026",
-    "Organization": "Amazon",
+    "Organization": "Anonymous Insurer",
     "Behavior": "Discrimination",
     "Specific Behavior": "Discrimination (other), User profiling",
     "Method": "Direct scrape, Code",
@@ -2967,7 +2967,7 @@ const DATA = [
     "DOI": "https://doi.org/10.1016/j.ejor.2026.01.021",
     "Title": "Sensitivity-based measures of discrimination in insurance pricing",
     "Authors": "Lindholm et al.",
-    "Source": "NEEDS HUMAN REVIEW"
+    "Source": "2026 Refresh (Bandy)"
   },
   {
     "Year": "2026",
@@ -8716,7 +8716,7 @@ const DATA = [
   },
   {
     "Year": "2022",
-    "Organization": "Amazon",
+    "Organization": "Amazon, Google, Microsoft",
     "Behavior": "Discrimination",
     "Specific Behavior": "Harmful content, User categorization, User profiling",
     "Method": "Direct scrape",
@@ -8727,7 +8727,7 @@ const DATA = [
     "DOI": "https://www.scopus.com/inward/record.uri?eid=2-s2.0-85163208410&partnerID=40&md5=1221f1dc92119b801f6696683314361d",
     "Title": "Robustness Disparities in Face Detection",
     "Authors": "Dooley et al.",
-    "Source": "NEEDS HUMAN REVIEW"
+    "Source": "2026 Refresh (Bandy)"
   },
   {
     "Year": "2022",
@@ -8892,7 +8892,7 @@ const DATA = [
     "DOI": "https://doi.org/10.4324/9781003170884-18",
     "Title": "Ad Accountability Online: A methodological approach",
     "Authors": "Andrejevic et al.",
-    "Source": "2026 Review (Bandy)"
+    "Source": "2026 Refresh (Bandy)"
   },
   {
     "Year": "2022",
@@ -11202,7 +11202,7 @@ const DATA = [
     "DOI": "https://doi.org/10.1126/science.abp9364",
     "Title": "How do social media feed algorithms affect attitudes and behavior in an election campaign?",
     "Authors": "Guesss et al.",
-    "Source": "2026 Review (Bandy)"
+    "Source": "2026 Refresh (Bandy)"
   },
   {
     "Year": "2025",
@@ -11217,6 +11217,6 @@ const DATA = [
     "DOI": "https://doi.org/10.48550/arXiv.2509.09826",
     "Title": "The Role of Follow Networks and Twitter's Content Recommender on Partisan Skew and Rumor Exposure during the 2022 U.S. Midterm Election",
     "Authors": "Duskin et al.",
-    "Source": "026 Review (Bandy)"
+    "Source": "2026 Refresh (Bandy)"
   }
 ];
