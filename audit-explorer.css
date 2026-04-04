@@ -106,6 +106,8 @@ td a:hover { text-decoration: underline; }
 .tag-domain { background: #eee; color: #555; }
 .tag-org { background: #eee; color: #555; }
 .tag-source { background: #eee; color: #555; white-space: nowrap; }
+a.tag-source { text-decoration: none; cursor: pointer; }
+a.tag-source:hover { filter: brightness(0.88); }
 .no-results { text-align: center; padding: 48px; color: #999; font-size: 15px; }
 
 .footnotes {

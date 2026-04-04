@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review Queue – Algorithm Audits</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f7f7f7; color: #222; min-height: 100vh; }
+
+/* ── Setup overlay ── */
+#setup-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.55);
+  display: flex; align-items: center; justify-content: center; z-index: 100;
+}
+.setup-card {
+  background: #fff; border-radius: 16px; padding: 36px; max-width: 480px; width: 90%;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.setup-card h2 { font-size: 20px; margin-bottom: 8px; }
+.setup-card > p { font-size: 13px; color: #666; margin-bottom: 24px; line-height: 1.5; }
+.bird-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.bird-chip {
+  padding: 8px 16px; border: 2px solid #ddd; border-radius: 24px;
+  font-size: 13px; cursor: pointer; transition: all 0.15s; background: #fff;
+  font-family: inherit;
+}
+.bird-chip:hover { border-color: #1a1a2e; }
+.bird-chip.selected { border-color: #1a1a2e; background: #1a1a2e; color: #fff; }
+.setup-divider {
+  text-align: center; color: #bbb; font-size: 12px; margin: 14px 0;
+  display: flex; align-items: center; gap: 10px;
+}
+.setup-divider::before, .setup-divider::after { content: ''; flex: 1; height: 1px; background: #eee; }
+.setup-custom input {
+  width: 100%; padding: 10px 14px; border: 1px solid #ddd; border-radius: 8px;
+  font-size: 14px; font-family: inherit; outline: none; transition: border-color 0.15s;
+}
+.setup-custom input:focus { border-color: #1a1a2e; }
+.setup-preview {
+  margin: 16px 0 20px; padding: 11px 14px; background: #f0f0ff; border-radius: 8px;
+  font-size: 13px; color: #555; line-height: 1.5;
+}
+.setup-preview strong { color: #1a1a2e; }
+.btn-primary {
+  width: 100%; padding: 14px; background: #1a1a2e; color: #fff;
+  border: none; border-radius: 10px; font-size: 15px; font-weight: 600;
+  cursor: pointer; font-family: inherit; transition: opacity 0.15s;
+}
+.btn-primary:hover { opacity: 0.9; }
+.btn-primary:disabled { opacity: 0.35; cursor: not-allowed; }
+
+/* ── Top bar ── */
+#app { display: none; }
+#app-header {
+  background: #1a1a2e; color: #fff; padding: 0 20px;
+  display: flex; align-items: center; gap: 12px; height: 52px;
+  position: sticky; top: 0; z-index: 10;
+}
+.back-link {
+  color: #9999bb; text-decoration: none; font-size: 13px;
+  display: flex; align-items: center; gap: 4px; white-space: nowrap;
+}
+.back-link:hover { color: #fff; }
+.header-spacer { flex: 1; }
+.progress-info { font-size: 13px; color: #9999bb; white-space: nowrap; }
+.progress-info strong { color: #fff; }
+.nav-btn, .export-btn {
+  padding: 6px 12px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18);
+  color: #ddd; border-radius: 6px; font-size: 12px; cursor: pointer;
+  font-family: inherit; transition: background 0.15s; white-space: nowrap;
+}
+.nav-btn:hover, .export-btn:hover { background: rgba(255,255,255,0.18); color: #fff; }
+.progress-bar-outer { height: 3px; background: #2a2a3e; }
+.progress-bar-fill { height: 100%; background: #6666dd; transition: width 0.4s ease; width: 0; }
+
+/* ── Main layout ── */
+main { max-width: 820px; margin: 0 auto; padding: 24px 20px 100px; }
+
+/* ── Paper card ── */
+.paper-card {
+  background: #fff; border-radius: 12px; padding: 28px 32px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08); margin-bottom: 0;
+}
+.paper-title { font-size: 18px; font-weight: 600; line-height: 1.45; margin-bottom: 6px; }
+.paper-meta { font-size: 13px; color: #777; margin-bottom: 24px; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.year-badge {
+  display: inline-block; background: #f0f0f0; color: #555; border-radius: 4px;
+  padding: 2px 8px; font-size: 12px; font-weight: 500;
+}
+.reviewed-badge {
+  display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px;
+  font-weight: 600; background: #d4edda; color: #155724; vertical-align: middle; margin-left: 8px;
+}
+
+/* DOI button */
+.doi-section { margin-bottom: 20px; }
+.doi-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #1a1a2e; color: #fff !important; padding: 11px 22px; border-radius: 9px;
+  text-decoration: none; font-size: 14px; font-weight: 600;
+  box-shadow: 0 2px 8px rgba(26,26,46,0.25); transition: opacity 0.15s;
+}
+.doi-btn:hover { opacity: 0.88; }
+.doi-btn.unavailable { background: #ccc; cursor: default; pointer-events: none; }
+.doi-url { font-size: 11px; color: #aaa; margin-top: 6px; font-family: monospace; word-break: break-all; }
+
+/* Abstract */
+.abstract-section {
+  margin-bottom: 24px; border: 1px solid #eee; border-radius: 8px; overflow: hidden;
+}
+.abstract-toggle {
+  display: flex; align-items: center; gap: 8px; width: 100%;
+  padding: 11px 14px; background: #fafafa; border: none; cursor: pointer;
+  font-family: inherit; font-size: 12px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.6px; color: #888; text-align: left; transition: background 0.1s;
+}
+.abstract-toggle:hover { background: #f3f3f3; color: #555; }
+.abstract-toggle .arrow { font-size: 10px; transition: transform 0.15s; }
+.abstract-toggle.open .arrow { transform: rotate(90deg); }
+.abstract-body-wrap {
+  padding: 14px 16px; display: none; border-top: 1px solid #eee;
+}
+.abstract-body-wrap.open { display: block; }
+.abstract-text { font-size: 13px; color: #444; line-height: 1.65; }
+.abstract-dim { font-size: 13px; color: #bbb; font-style: italic; }
+
+/* Form sections */
+.form-section { padding: 20px 0; border-top: 1px solid #f0f0f0; }
+.form-section:first-of-type { border-top: none; padding-top: 0; }
+.field-label {
+  display: block; font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.8px; color: #999; margin-bottom: 10px;
+}
+
+/* Checkboxes */
+.checkbox-grid { display: flex; flex-wrap: wrap; gap: 4px 0; }
+.checkbox-grid label {
+  display: flex; align-items: center; gap: 7px; font-size: 13px;
+  cursor: pointer; padding: 5px 10px; border-radius: 6px;
+  transition: background 0.1s; white-space: nowrap; user-select: none;
+}
+.checkbox-grid label:hover { background: #f5f5f5; }
+.checkbox-grid input[type=checkbox] { accent-color: #1a1a2e; width: 15px; height: 15px; cursor: pointer; }
+
+/* Filterable checkbox search */
+.cbg-search {
+  width: 100%; padding: 7px 12px; border: 1px solid #e0e0e0; border-radius: 7px;
+  font-size: 13px; font-family: inherit; outline: none; margin-bottom: 8px;
+  background: #fafafa; transition: border-color 0.15s;
+}
+.cbg-search:focus { border-color: #1a1a2e; background: #fff; }
+.checkbox-grid-scroll { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+.cbg-none { font-size: 13px; color: #bbb; font-style: italic; padding: 4px 10px; display: none; }
+.cbg-none.visible { display: block; }
+
+/* Text inputs */
+.text-input {
+  width: 100%; padding: 9px 13px; border: 1px solid #ddd; border-radius: 8px;
+  font-size: 14px; font-family: inherit; outline: none; transition: border-color 0.15s; background: #fff;
+}
+.text-input:focus { border-color: #1a1a2e; }
+.input-row { display: grid; grid-template-columns: 90px 1fr 1fr; gap: 12px; }
+
+/* Org tag input */
+.org-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; min-height: 10px; }
+.org-tag {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: #1a1a2e; color: #fff; padding: 4px 8px 4px 11px;
+  border-radius: 16px; font-size: 12px; font-weight: 500;
+}
+.org-remove {
+  background: none; border: none; color: rgba(255,255,255,0.6); cursor: pointer;
+  font-size: 15px; line-height: 1; padding: 0 2px; display: flex; align-items: center;
+  transition: color 0.1s;
+}
+.org-remove:hover { color: #fff; }
+.org-search-wrap { position: relative; }
+.org-dropdown {
+  position: absolute; top: calc(100% + 4px); left: 0; right: 0;
+  background: #fff; border: 1px solid #ddd; border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1); max-height: 220px; overflow-y: auto;
+  z-index: 20; display: none;
+}
+.org-dropdown.open { display: block; }
+.org-option {
+  padding: 8px 14px; font-size: 13px; cursor: pointer;
+  transition: background 0.1s;
+}
+.org-option:hover { background: #f5f5f5; }
+.org-option.add-new { color: #1a1a2e; font-style: italic; border-top: 1px solid #f0f0f0; }
+
+/* ── Action bar ── */
+.action-bar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: #fff; border-top: 1px solid #eee;
+  padding: 12px 24px; display: none; align-items: center; gap: 10px;
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.06); z-index: 10;
+}
+.action-bar.visible { display: flex; }
+.reviewer-label {
+  font-size: 12px; color: #aaa; flex: 1; display: flex; align-items: center; gap: 6px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.reviewer-label strong { color: #666; font-weight: 600; }
+.btn-change-reviewer {
+  font-size: 11px; color: #bbb; text-decoration: underline; cursor: pointer;
+  background: none; border: none; font-family: inherit; white-space: nowrap;
+}
+.btn-change-reviewer:hover { color: #888; }
+.btn-flag {
+  padding: 10px 18px; background: #fff; color: #c0392b;
+  border: 1px solid #e0b4b0; border-radius: 8px; font-size: 13px;
+  cursor: pointer; font-family: inherit; transition: all 0.15s; white-space: nowrap;
+}
+.btn-flag:hover { background: #fdf0ef; border-color: #c0392b; }
+.btn-skip {
+  padding: 10px 18px; background: #fff; color: #555;
+  border: 1px solid #ddd; border-radius: 8px; font-size: 13px;
+  cursor: pointer; font-family: inherit; transition: border-color 0.15s; white-space: nowrap;
+}
+.btn-skip:hover { border-color: #999; }
+.btn-save {
+  padding: 10px 24px; background: #1a1a2e; color: #fff;
+  border: none; border-radius: 8px; font-size: 14px; font-weight: 600;
+  cursor: pointer; font-family: inherit; transition: opacity 0.15s; white-space: nowrap;
+}
+.btn-save:hover { opacity: 0.88; }
+
+/* ── Empty / done state ── */
+.done-state { text-align: center; padding: 80px 24px; }
+.done-state h2 { font-size: 22px; color: #444; margin-bottom: 10px; }
+.done-state p { font-size: 14px; color: #999; }
+.done-state .export-big {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 28px; padding: 13px 28px; background: #1a1a2e; color: #fff;
+  border: none; border-radius: 10px; font-size: 15px; font-weight: 600;
+  cursor: pointer; font-family: inherit;
+}
+
+/* ── Toast ── */
+.toast {
+  position: fixed; bottom: 76px; left: 50%; transform: translateX(-50%) translateY(10px);
+  background: #1a1a2e; color: #fff; padding: 9px 18px; border-radius: 8px;
+  font-size: 13px; opacity: 0; transition: all 0.22s; pointer-events: none; z-index: 50;
+  white-space: nowrap;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+@media (max-width: 600px) {
+  .paper-card { padding: 20px 18px; }
+  .input-row { grid-template-columns: 1fr 1fr; }
+  .action-bar { flex-wrap: wrap; gap: 8px; }
+  .reviewer-label { width: 100%; }
+  .btn-save { flex: 1; }
+  #app-header { gap: 8px; }
+  .progress-info { font-size: 11px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── Setup overlay ── -->
+<div id="setup-overlay">
+  <div class="setup-card">
+    <h2>Welcome to the Review Queue</h2>
+    <p>Pick a reviewer name. Approved entries will be credited to this name in the exported data.</p>
+    <div class="bird-chips" id="bird-chips"></div>
+    <div class="setup-divider">or enter a custom name</div>
+    <div class="setup-custom">
+      <input type="text" id="custom-name" placeholder="e.g. 2026 Refresh (Bandy)" maxlength="60">
+    </div>
+    <div class="setup-preview">
+      Source will appear as: <strong id="preview-name">—</strong>
+    </div>
+    <button class="btn-primary" id="setup-start" disabled onclick="startReviewing()">Start reviewing</button>
+  </div>
+</div>
+
+<!-- ── App ── -->
+<div id="app">
+  <div id="app-header">
+    <a href="index.html" class="back-link">&#8592; Explorer</a>
+    <span class="header-spacer"></span>
+    <span class="progress-info" id="progress-info"></span>
+    <button class="nav-btn" onclick="navigate(-1)">&#8592;</button>
+    <button class="nav-btn" onclick="navigate(1)">&#8594;</button>
+    <button class="export-btn" onclick="exportJSON()">&#8595; Export JSON</button>
+  </div>
+  <div class="progress-bar-outer">
+    <div class="progress-bar-fill" id="progress-bar"></div>
+  </div>
+
+  <main id="main-content"></main>
+
+  <div class="action-bar" id="action-bar">
+    <div class="reviewer-label">
+      Reviewing as: <strong id="reviewer-display"></strong>
+      <button class="btn-change-reviewer" onclick="changeReviewer()">change</button>
+    </div>
+    <button class="btn-flag" onclick="flagRemoval()">&#128465; Flag for removal</button>
+    <button class="btn-skip" onclick="skipPaper()">Skip &#8594;</button>
+    <button class="btn-save" onclick="savePaper()">&#10003; Save &amp; Next</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="audit-data.js"></script>
+<script>
+// ── Constants ───────────────────────────────────────────────────────────────
+
+const BIRDS = ['Robin', 'Wren', 'Finch', 'Sparrow', 'Heron', 'Kestrel', 'Ibis', 'Teal', 'Swift', 'Merlin', 'Martin', 'Grouse'];
+
+const BEHAVIORS = ['Discrimination', 'Distortion', 'Exploitation', 'Misjudgement'];
+
+const METHODS = [
+  'Direct scrape', 'Sock puppets', 'Crowdsourcing', 'Carrier puppet',
+  'Persona scrape', 'Code', 'Non-persona scrape', 'Repurposing',
+  'Interview', 'Platform-led experiment'
+];
+
+// Build sorted unique lists from data
+const DOMAINS = [...new Set(
+  DATA.flatMap(r => (r.Domain || '').split(',').map(x => x.trim()).filter(Boolean))
+)].sort();
+
+const ALL_ORGS = [...new Set(
+  DATA.flatMap(r => (r.Organization || '').split(',').map(x => x.trim()).filter(Boolean))
+)].sort();
+
+// Specific behaviors: case-insensitive dedup from data, prefer capitalized form
+const SPECIFIC_BEHAVIORS = (() => {
+  const seen = new Map(); // lowercase key → display value
+  DATA.forEach(r => {
+    (r['Specific Behavior'] || '').split(',').forEach(v => {
+      v = v.trim();
+      if (!v) return;
+      const key = v.toLowerCase();
+      const existing = seen.get(key);
+      // Keep the more-capitalized version (title case wins over all-lower)
+      if (!existing || (v[0] === v[0].toUpperCase() && (!existing[0] || existing[0] !== existing[0].toUpperCase()))) {
+        seen.set(key, v);
+      }
+    });
+  });
+  return [...seen.values()].sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+})();
+
+// ── State ───────────────────────────────────────────────────────────────────
+
+let reviewer = '';
+let queue = [];      // indices into DATA where Source === 'NEEDS HUMAN REVIEW'
+let queuePos = 0;
+let reviews = {};    // key → review object (persisted in localStorage)
+let currentOrgs = [];
+let abstractOpen = true;
+
+// ── Setup ───────────────────────────────────────────────────────────────────
+
+function initSetup() {
+  const shuffled = BIRDS.slice().sort(() => Math.random() - 0.5).slice(0, 6);
+  const chips = document.getElementById('bird-chips');
+  shuffled.forEach(bird => {
+    const btn = document.createElement('button');
+    btn.className = 'bird-chip';
+    btn.textContent = bird;
+    btn.onclick = () => {
+      document.querySelectorAll('.bird-chip').forEach(c => c.classList.remove('selected'));
+      btn.classList.add('selected');
+      document.getElementById('custom-name').value = '';
+      setPreview(bird + ' (Anonymous)');
+    };
+    chips.appendChild(btn);
+  });
+
+  document.getElementById('custom-name').addEventListener('input', e => {
+    document.querySelectorAll('.bird-chip').forEach(c => c.classList.remove('selected'));
+    setPreview(e.target.value.trim());
+  });
+
+  const stored = localStorage.getItem('audit-reviewer');
+  if (stored) {
+    reviewer = stored;
+    loadReviews();
+    showApp();
+  }
+}
+
+function setPreview(name) {
+  document.getElementById('preview-name').textContent = name || '—';
+  document.getElementById('setup-start').disabled = !name;
+}
+
+function startReviewing() {
+  const selected = document.querySelector('.bird-chip.selected');
+  const custom = document.getElementById('custom-name').value.trim();
+  reviewer = selected ? selected.textContent + ' (Anonymous)' : custom;
+  if (!reviewer) return;
+  localStorage.setItem('audit-reviewer', reviewer);
+  loadReviews();
+  showApp();
+}
+
+function changeReviewer() {
+  localStorage.removeItem('audit-reviewer');
+  reviewer = '';
+  document.getElementById('app').style.display = 'none';
+  document.getElementById('setup-overlay').style.display = 'flex';
+  document.querySelectorAll('.bird-chip').forEach(c => c.classList.remove('selected'));
+  document.getElementById('custom-name').value = '';
+  setPreview('');
+}
+
+// ── Data ────────────────────────────────────────────────────────────────────
+
+function loadReviews() {
+  try { reviews = JSON.parse(localStorage.getItem('audit-reviews') || '{}'); }
+  catch(e) { reviews = {}; }
+}
+
+function saveReviews() {
+  localStorage.setItem('audit-reviews', JSON.stringify(reviews));
+}
+
+function paperKey(paper) {
+  return paper.DOI || paper.Title || String(DATA.indexOf(paper));
+}
+
+function showApp() {
+  document.getElementById('setup-overlay').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  document.getElementById('reviewer-display').textContent = reviewer;
+
+  queue = DATA.map((r, i) => i).filter(i => DATA[i].Source === 'NEEDS HUMAN REVIEW');
+
+  // Start at first unreviewed (non-skipped) paper
+  const firstPending = queue.findIndex(i => {
+    const r = reviews[paperKey(DATA[i])];
+    return !r || r.action === 'skip';
+  });
+  queuePos = firstPending !== -1 ? firstPending : 0;
+
+  renderPaper();
+}
+
+// ── Filterable checkbox section ──────────────────────────────────────────────
+
+function filteredCheckboxSection(name, options, selectedArr, placeholder) {
+  return `
+    <input type="text" class="cbg-search" data-cbg="${name}"
+      placeholder="${esc(placeholder)}" autocomplete="off">
+    <div class="checkbox-grid checkbox-grid-scroll" id="cbg-${name}">
+      ${options.map(opt => checkboxHtml(name, opt, selectedArr)).join('')}
+    </div>
+    <div class="cbg-none" id="cbg-none-${name}">No matches</div>`;
+}
+
+// ── Render ──────────────────────────────────────────────────────────────────
+
+function renderPaper() {
+  const main = document.getElementById('main-content');
+  const actionBar = document.getElementById('action-bar');
+
+  if (queue.length === 0) {
+    main.innerHTML = `<div class="done-state"><h2>No papers to review</h2>
+      <p>There are no entries marked "NEEDS HUMAN REVIEW" in the dataset.</p></div>`;
+    actionBar.classList.remove('visible');
+    document.getElementById('progress-info').textContent = '';
+    return;
+  }
+
+  const paper = DATA[queue[queuePos]];
+  const key = paperKey(paper);
+  const existing = reviews[key];
+  const d = existing ? existing.data : paper;
+
+  currentOrgs = (d.Organization || '').split(',').map(x => x.trim()).filter(Boolean);
+
+  // Progress counts
+  const doneCount = Object.values(reviews).filter(r => r.action !== 'skip').length;
+  document.getElementById('progress-info').innerHTML =
+    `<strong>${queuePos + 1}</strong>&thinsp;/&thinsp;${queue.length} &nbsp;·&nbsp; ${doneCount} done`;
+  document.getElementById('progress-bar').style.width =
+    ((queuePos + 1) / queue.length * 100) + '%';
+
+  const reviewedBadge = (existing && existing.action !== 'skip')
+    ? `<span class="reviewed-badge">${existing.action === 'remove' ? 'Flagged' : 'Reviewed'}</span>` : '';
+
+  main.innerHTML = `
+    <div class="paper-card">
+
+      <div class="paper-title">${esc(paper.Title || paper.Reference || 'Untitled')}${reviewedBadge}</div>
+      <div class="paper-meta">
+        <span>${esc(paper.Authors || '')}</span>
+        ${paper.Year ? `<span class="year-badge">${esc(paper.Year)}</span>` : ''}
+      </div>
+
+      <div class="doi-section">
+        ${paper.DOI
+          ? `<a href="${esc(paper.DOI)}" target="_blank" rel="noopener" class="doi-btn">&#128279;&nbsp; Open Paper</a>
+             <div class="doi-url">${esc(paper.DOI)}</div>`
+          : `<span class="doi-btn unavailable">&#128279;&nbsp; No DOI available</span>`}
+      </div>
+
+      <div class="abstract-section">
+        <button class="abstract-toggle${abstractOpen ? ' open' : ''}" id="abstract-toggle" onclick="toggleAbstract()">
+          <span class="arrow">&#9654;</span> Abstract
+        </button>
+        <div class="abstract-body-wrap${abstractOpen ? ' open' : ''}" id="abstract-body">
+          <div class="abstract-dim" id="abstract-text">Fetching abstract&hellip;</div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <span class="field-label">Behavior</span>
+        <div class="checkbox-grid">
+          ${BEHAVIORS.map(b => checkboxHtml('behavior', b, splitVal(d.Behavior))).join('')}
+        </div>
+      </div>
+
+      <div class="form-section">
+        <span class="field-label">Specific Behavior</span>
+        ${filteredCheckboxSection('specific-behavior', SPECIFIC_BEHAVIORS, splitVal(d['Specific Behavior']), 'Search specific behaviors\u2026')}
+      </div>
+
+      <div class="form-section">
+        <span class="field-label">Method</span>
+        ${filteredCheckboxSection('method', METHODS, splitVal(d.Method), 'Search methods\u2026')}
+      </div>
+
+      <div class="form-section">
+        <span class="field-label">Domain</span>
+        ${filteredCheckboxSection('domain', DOMAINS, splitVal(d.Domain), 'Search domains\u2026')}
+      </div>
+
+      <div class="form-section">
+        <span class="field-label">Organization</span>
+        <div class="org-tags" id="org-tags"></div>
+        <div class="org-search-wrap">
+          <input type="text" id="org-search" class="text-input"
+            placeholder="Type to search or add an organization&hellip;" autocomplete="off">
+          <div class="org-dropdown" id="org-dropdown"></div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="input-row">
+          <div>
+            <label class="field-label" for="f-year">Year</label>
+            <input type="number" id="f-year" class="text-input"
+              value="${esc(d.Year || '')}" min="1990" max="2030">
+          </div>
+          <div>
+            <label class="field-label" for="f-language">Language</label>
+            <input type="text" id="f-language" class="text-input"
+              value="${esc(d.Language || '')}" placeholder="e.g. English">
+          </div>
+          <div>
+            <label class="field-label" for="f-country-studied">Country Studied</label>
+            <input type="text" id="f-country-studied" class="text-input"
+              value="${esc(d['Country Studied'] || '')}" placeholder="e.g. US, UK">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label class="field-label" for="f-country-researchers">Country of Researchers</label>
+        <input type="text" id="f-country-researchers" class="text-input"
+          value="${esc(d['Country of Researchers'] || '')}" placeholder="e.g. US">
+      </div>
+
+    </div>`;
+
+  actionBar.classList.add('visible');
+  renderOrgTags();
+  initOrgSearch();
+  if (paper.DOI) fetchAbstract(paper.DOI);
+}
+
+// ── Abstract ────────────────────────────────────────────────────────────────
+
+function toggleAbstract() {
+  abstractOpen = !abstractOpen;
+  document.getElementById('abstract-toggle').classList.toggle('open', abstractOpen);
+  document.getElementById('abstract-body').classList.toggle('open', abstractOpen);
+}
+
+async function fetchAbstract(doiField) {
+  const el = document.getElementById('abstract-text');
+  if (!el) return;
+
+  const m = doiField.match(/10\.\d{4,}\/[^\s"<>]+/);
+  if (!m) { el.textContent = 'Abstract not available (no DOI).'; el.className = 'abstract-dim'; return; }
+  const doi = m[0].replace(/[.,;)\]]+$/, '');
+
+  // Try Semantic Scholar first
+  try {
+    const r = await fetch(
+      `https://api.semanticscholar.org/graph/v1/paper/DOI:${encodeURIComponent(doi)}?fields=abstract`,
+      { signal: AbortSignal.timeout(8000) }
+    );
+    if (r.ok) {
+      const j = await r.json();
+      if (j.abstract) { el.textContent = j.abstract; el.className = 'abstract-text'; return; }
+    }
+  } catch(e) {}
+
+  // Fallback: OpenAlex
+  try {
+    const r = await fetch(
+      `https://api.openalex.org/works/doi:${encodeURIComponent(doi)}`,
+      { signal: AbortSignal.timeout(8000) }
+    );
+    if (r.ok) {
+      const j = await r.json();
+      if (j.abstract_inverted_index) {
+        const words = {};
+        for (const [w, pos] of Object.entries(j.abstract_inverted_index))
+          pos.forEach(p => { words[p] = w; });
+        const max = Math.max(...Object.keys(words).map(Number));
+        const text = Array.from({ length: max + 1 }, (_, i) => words[i] || '').join(' ').trim();
+        if (text) { el.textContent = text; el.className = 'abstract-text'; return; }
+      }
+    }
+  } catch(e) {}
+
+  el.textContent = 'Abstract not available.';
+  el.className = 'abstract-dim';
+}
+
+// ── Org tag input ────────────────────────────────────────────────────────────
+
+function renderOrgTags() {
+  const c = document.getElementById('org-tags');
+  if (!c) return;
+  c.innerHTML = currentOrgs.map(org =>
+    `<span class="org-tag">${esc(org)}<button class="org-remove" data-org="${esc(org)}" title="Remove">&#215;</button></span>`
+  ).join('');
+}
+
+function addOrg(name) {
+  name = name.trim();
+  if (name && !currentOrgs.includes(name)) { currentOrgs.push(name); renderOrgTags(); }
+  const inp = document.getElementById('org-search');
+  if (inp) inp.value = '';
+  hideOrgDropdown();
+}
+
+function initOrgSearch() {
+  const inp = document.getElementById('org-search');
+  const dd = document.getElementById('org-dropdown');
+  if (!inp || !dd) return;
+
+  inp.addEventListener('input', () => {
+    const q = inp.value.trim().toLowerCase();
+    if (!q) { hideOrgDropdown(); return; }
+    const matches = ALL_ORGS.filter(o => o.toLowerCase().includes(q) && !currentOrgs.includes(o)).slice(0, 10);
+    const val = inp.value.trim();
+    const exactMatch = ALL_ORGS.some(o => o.toLowerCase() === q);
+    let html = matches.map(o => `<div class="org-option" data-val="${esc(o)}">${esc(o)}</div>`).join('');
+    if (val && !currentOrgs.includes(val) && !exactMatch)
+      html += `<div class="org-option add-new" data-val="${esc(val)}">+ Add &ldquo;${esc(val)}&rdquo;</div>`;
+    dd.innerHTML = html;
+    dd.classList.toggle('open', !!html);
+  });
+
+  inp.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const first = dd.querySelector('.org-option');
+      if (first) addOrg(first.dataset.val);
+      else if (inp.value.trim()) addOrg(inp.value.trim());
+    } else if (e.key === 'Escape') {
+      hideOrgDropdown();
+    }
+  });
+
+  dd.addEventListener('click', e => {
+    const opt = e.target.closest('.org-option');
+    if (opt && opt.dataset.val) addOrg(opt.dataset.val);
+  });
+}
+
+function hideOrgDropdown() {
+  const dd = document.getElementById('org-dropdown');
+  if (dd) { dd.classList.remove('open'); dd.innerHTML = ''; }
+}
+
+// Filter checkboxes as user types in a cbg-search input
+document.addEventListener('input', e => {
+  if (!e.target.classList.contains('cbg-search')) return;
+  const name = e.target.dataset.cbg;
+  const q = e.target.value.trim().toLowerCase();
+  const grid = document.getElementById('cbg-' + name);
+  const noMsg = document.getElementById('cbg-none-' + name);
+  if (!grid) return;
+  let visible = 0;
+  grid.querySelectorAll('label').forEach(label => {
+    const cb = label.querySelector('input');
+    const show = !q || label.textContent.trim().toLowerCase().includes(q) || cb.checked;
+    label.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  if (noMsg) noMsg.classList.toggle('visible', q.length > 0 && visible === 0);
+});
+
+// Global delegation for org tag removal and dropdown close
+document.addEventListener('click', e => {
+  const removeBtn = e.target.closest('.org-remove');
+  if (removeBtn) {
+    currentOrgs = currentOrgs.filter(o => o !== removeBtn.dataset.org);
+    renderOrgTags();
+    return;
+  }
+  if (!e.target.closest('.org-search-wrap')) hideOrgDropdown();
+});
+
+// ── Review actions ───────────────────────────────────────────────────────────
+
+function collectForm() {
+  const paper = DATA[queue[queuePos]];
+  return {
+    Title: paper.Title,
+    Authors: paper.Authors,
+    Year: document.getElementById('f-year').value.trim(),
+    DOI: paper.DOI || '',
+    Behavior: checked('behavior').join(', '),
+    'Specific Behavior': checked('specific-behavior').join(', '),
+    Method: checked('method').join(', '),
+    Domain: checked('domain').join(', '),
+    Organization: currentOrgs.join(', '),
+    Language: document.getElementById('f-language').value.trim(),
+    'Country Studied': document.getElementById('f-country-studied').value.trim(),
+    'Country of Researchers': document.getElementById('f-country-researchers').value.trim(),
+  };
+}
+
+function savePaper() {
+  const paper = DATA[queue[queuePos]];
+  const key = paperKey(paper);
+  const data = collectForm();
+  reviews[key] = {
+    action: 'approve',
+    reviewer,
+    timestamp: new Date().toISOString(),
+    data: { ...data, Source: reviewer }
+  };
+  saveReviews();
+  showToast('Saved!');
+  advance();
+}
+
+function skipPaper() {
+  const paper = DATA[queue[queuePos]];
+  reviews[paperKey(paper)] = {
+    action: 'skip',
+    reviewer,
+    timestamp: new Date().toISOString(),
+    data: collectForm()
+  };
+  saveReviews();
+  advance();
+}
+
+function flagRemoval() {
+  if (!confirm('Flag this paper for removal? It will be marked "TAGGED FOR REMOVAL" and excluded from the explorer.')) return;
+  const paper = DATA[queue[queuePos]];
+  const key = paperKey(paper);
+  reviews[key] = {
+    action: 'remove',
+    reviewer,
+    timestamp: new Date().toISOString(),
+    data: { ...collectForm(), Source: 'TAGGED FOR REMOVAL' }
+  };
+  saveReviews();
+  showToast('Flagged for removal');
+  advance();
+}
+
+function advance() {
+  // Find next paper that hasn't been approved or flagged
+  for (let i = queuePos + 1; i < queue.length; i++) {
+    const r = reviews[paperKey(DATA[queue[i]])];
+    if (!r || r.action === 'skip') { queuePos = i; renderPaper(); return; }
+  }
+  // Wrap around
+  for (let i = 0; i < queuePos; i++) {
+    const r = reviews[paperKey(DATA[queue[i]])];
+    if (!r || r.action === 'skip') { queuePos = i; renderPaper(); return; }
+  }
+  // All done
+  const done = Object.values(reviews).filter(r => r.action !== 'skip').length;
+  document.getElementById('main-content').innerHTML = `
+    <div class="done-state">
+      <h2>Queue complete!</h2>
+      <p>You've reviewed all ${queue.length} papers in the queue (${done} approved or flagged).</p>
+      <button class="export-big btn-primary" style="display:inline-flex;gap:8px;margin-top:28px;width:auto;padding:13px 28px"
+        onclick="exportJSON()">&#8595;&nbsp; Download reviews JSON</button>
+    </div>`;
+  document.getElementById('action-bar').classList.remove('visible');
+}
+
+function navigate(dir) {
+  queuePos = Math.max(0, Math.min(queue.length - 1, queuePos + dir));
+  renderPaper();
+}
+
+// ── Export ───────────────────────────────────────────────────────────────────
+
+function exportJSON() {
+  const actionable = Object.values(reviews).filter(r => r.action !== 'skip');
+  if (!actionable.length) { showToast('No reviews to export yet.'); return; }
+
+  const out = {
+    exported_at: new Date().toISOString(),
+    reviewer,
+    total: actionable.length,
+    reviews: actionable.map(r => ({ action: r.action, timestamp: r.timestamp, ...r.data }))
+  };
+
+  const blob = new Blob([JSON.stringify(out, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = Object.assign(document.createElement('a'), {
+    href: url,
+    download: `audit-reviews-${new Date().toISOString().slice(0, 10)}.json`
+  });
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast(`Exported ${actionable.length} review${actionable.length !== 1 ? 's' : ''}`);
+}
+
+// ── Helpers ──────────────────────────────────────────────────────────────────
+
+function esc(s) {
+  return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+function splitVal(v) {
+  return (v || '').split(',').map(x => x.trim()).filter(Boolean);
+}
+
+function checked(name) {
+  return [...document.querySelectorAll(`input[name=${name}]:checked`)].map(i => i.value);
+}
+
+function checkboxHtml(name, value, selectedArr) {
+  const isChecked = selectedArr.includes(value);
+  return `<label><input type="checkbox" name="${name}" value="${esc(value)}"${isChecked ? ' checked' : ''}>${esc(value)}</label>`;
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+
+initSetup();
+</script>
+</body>
+</html>

@@ -26,9 +26,10 @@ const ORG_COLORS = {
 // Source color map
 const SOURCE_COLORS = {
   "NEEDS HUMAN REVIEW": { bg: "#fff3cd", text: "#856404" },
+  "TAGGED FOR REMOVAL": { bg: "#f8d7da", text: "#721c24" },
   "Urman et al. (2025)": { bg: "#d4edda", text: "#155724" },
   "2021 Review (Bandy)": { bg: "#d4edda", text: "#155724" },
-  "2026 Review (Bandy)": { bg: "#d4edda", text: "#155724" },
+  "2026 Refresh (Bandy)": { bg: "#d4edda", text: "#155724" },
 };
 
 let allMethods = [];
@@ -288,6 +289,7 @@ function shuffleRows() {
 
 function clearFilters() {
   filters = { methods: new Set(), domains: new Set(), orgs: new Set(), sources: new Set(), yearMin: YEAR_MIN_ABS, yearMax: YEAR_MAX_ABS };
+  allSources.forEach(([s]) => { if (s !== "NEEDS HUMAN REVIEW") filters.sources.add(s); });
   updateYearRange();
   render();
 }
@@ -304,6 +306,10 @@ function orgTagHtml(name) {
 function sourceTagHtml(source) {
   const s = (source || "").trim();
   const color = SOURCE_COLORS[s];
+  if (s === "NEEDS HUMAN REVIEW") {
+    const style = color ? ` style="background:${color.bg};color:${color.text}"` : "";
+    return `<a href="https://github.com/comp-journalism/list-of-algorithm-audits/issues" target="_blank" rel="noopener" class="tag tag-source"${style} title="This feature is not yet ready. Open an issue to request it.">${s}</a>`;
+  }
   if (color) {
     return `<span class="tag tag-source" style="background:${color.bg};color:${color.text}">${s}</span>`;
   }
@@ -371,5 +377,6 @@ allMethods = countByField("Method", true);
 allDomains = countByField("Domain", true);
 allOrgs = countByField("Organization", true);
 allSources = countByField("Source", false);
+allSources.forEach(([s]) => { if (s !== "NEEDS HUMAN REVIEW") filters.sources.add(s); });
 buildYearChart();
 render();
